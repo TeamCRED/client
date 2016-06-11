@@ -28,10 +28,16 @@ body .row .col {
   width: auto;
 }
 
+.tagline {
+  color: #F44336;
+  font-size: 1.2em;
+  text-align: center;
+}
+
 nav.landingNav {
   background: none;
   box-shadow: none;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 nav.landingNav a.logo {
@@ -41,6 +47,7 @@ nav.landingNav a.logo {
 nav.landingNav li a {
   color: white !important;
 }
+
 /* Landing Form */
 
 .landingForm {
@@ -175,7 +182,7 @@ main .more-info section.col {
   width: 60px;
   height: 60px;
 }
-  
+
 /*REDEEM*/
 
 .walt {
