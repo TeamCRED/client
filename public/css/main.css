@@ -21,11 +21,6 @@ body .row .col {
   height: 100vh;
 }
 
-.brand-logo {
-  margin-left: 20px;
-  font-size: 1.4em;
-}
-
 .logo {
   height: 50px;
   padding-top: 10px;
@@ -35,6 +30,7 @@ body .row .col {
 nav.landingNav {
   background: none;
   box-shadow: none;
+  margin-bottom: 40px;
 }
 
 nav.landingNav a.logo {
@@ -54,11 +50,17 @@ nav.landingNav li a {
   color: #333;
 }
 
-.input-field input[type=text]:focus + label,
-.input-field input[type=password]:focus + label,
-.input-field input[type=email]:focus + label {
-    color: #f44336;
-    border-bottom: none;
+.landingForm img {
+  width: 90%;
+  height: auto;
+}
+
+.landingForm button {
+  margin-top: 20px;
+}
+
+.input-field input[type=text]:focus + label {
+    color: red;
 }
 
 .input-field input[type=text]:focus,

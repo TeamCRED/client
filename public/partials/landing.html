@@ -18,46 +18,50 @@
     <br>
     <br>
     <div class="row">
-      <form class="col s12" ng-submit="submit()">
-        <div class="row">
-          <div class="input-field col s12">
-            <label>Beer</label>
-            <br>
-            <br>
-            <select ng-model="brew.beer_id" class="browser-default" required>
-              <option value="" disabled selected>Select a Beer</option>
-              <option value="{{ beer.id }}" ng-repeat="beer in beers">{{ beer.name }}</option>
-            </select>
+      <div class="col s12 l6">
+        <img src="/assets/can-guide-sm.jpg" alt="Visual guide to your can" />
+      </div>
+      <div class="col s12 l6">
+        <form class="col s12" ng-submit="submit()">
+          <div class="row">
+            <div class="input-field col s12">
+              <select ng-model="brew.beer_id" class="browser-default" required>
+                <option value="" disabled selected>Select a Beer</option>
+                <option value="{{ beer.id }}" ng-repeat="beer in beers">{{ beer.name }}</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="quote" type="text" class="validate" ng-model="brew.quote">
-            <label for="quote">Quote</label>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="quote" type="text" class="validate" ng-model="brew.quote">
+              <label for="quote">Quote</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s6">
-              <input id="date" type="date" class="validate" ng-model="brew.date">
-              <label for="date"></label>
+          <div class="row">
+            <div class="input-field col s6">
+                <input id="date" type="date" class="validate" ng-model="brew.date">
+                <label for="date"></label>
+            </div>
+            <div class="input-field col s6">
+              <input id="time" type="text" class="validate" ng-model="brew.time">
+              <label for="time">Time</label>
+            </div>
           </div>
-          <div class="input-field col s6">
-            <input id="time" type="text" class="validate" ng-model="brew.time">
-            <label for="time">Time</label>
+          <div class="row">
+            <div class="input-field col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="tank" type="text" class="validate" ng-model="brew.tank">
+                  <label for="tank">Tank</label>
+                </div>
+                <div class="center-align col s6">
+                  <button class="btn waves-effect red darken-5 waves-light" type="submit">Know Your Brew</button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="tank" type="text" class="validate" ng-model="brew.tank">
-            <label for="tank">Tank</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="center-align">
-            <button class="btn waves-effect red darken-5 waves-light" type="submit">Know Your Brew</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 </div>

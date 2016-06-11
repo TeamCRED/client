@@ -23,6 +23,11 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'partials/your-brew.html',
       controller: 'yourBrew'
     })
+    .state('dashboard.batch', {
+      url: '/batch/:batch_id',
+      templateUrl: 'partials/your-brew.html',
+      controller: 'yourBrew'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'partials/login.html',
