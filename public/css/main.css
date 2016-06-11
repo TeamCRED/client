@@ -6,6 +6,7 @@
 body {
   background: url('/assets/circles.png') repeat;
   font-family: 'AdobeGaramondPro', serif;
+  color: #595353;
 }
 
 /*LANDING*/
@@ -40,8 +41,9 @@ a h1 {
 
 /*DASHBOARD*/
 .left-nav {
-  background: white;
+  background: url('/assets/circles.png') repeat;
   height: 100vh;
+  border-right: solid 1px #333;
 }
 
 .left-nav .button {
@@ -77,4 +79,15 @@ a h1 {
 
 .row {
   margin-bottom: 0;
+}
+
+section .circle {
+  margin: 10px;
+  height: 40vh;
+}
+
+.mainDashboard {
+  padding: 0;
+  height: 100vh;
+  overflow: scroll;
 }
