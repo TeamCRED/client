@@ -41,7 +41,7 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
                   for (var i = 0; i < $scope.awards.length; i++) {
                     if($scope.awards[i].id == 1) {
                       var ipa = $scope.awards[i];
-                      $scope.awards.splice(i, 0);
+                      $scope.awards.splice(i, 1);
                       $scope.awards.unshift(ipa);
                       break;
                     }
