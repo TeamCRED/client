@@ -1,5 +1,6 @@
 app.controller('login', function($scope, Auth, $state){
   $('.tooltipped').tooltip('remove');
+  $('ul.tabs').tabs();
   if(Auth.getUser()) {
     $state.go('dashboard.profile');
   }

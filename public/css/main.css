@@ -9,6 +9,10 @@ body {
   background: url('/assets/circles.png') repeat;
 }
 
+.col {
+  padding: 0 !important;
+}
+
 /*LANDING*/
 
 .landingBackground {
