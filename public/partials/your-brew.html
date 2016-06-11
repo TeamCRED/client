@@ -11,15 +11,17 @@
     </div>
   </div>
 </div>
-<header class="row" ng-show="!loading" style="margin-top:10px;">
-    <div class="col s12 center-align">
-        <img style="height:400px;width:auto;" ng-src="{{beer.label_image.original}}">
-        <h1>{{beer.name}}</h1>
-        <h5>
-            {{beer.description}}
-        </h5>
-        <a ng-href="https://www.averybrewing.com/beers/{{beer.id}}">More Info</a>
-    </div>
+<header class="row dashboardBanner" ng-show="!loading">
+  <div class="col s6 center-align">
+    <img style="height:300px;width:auto;" ng-src="{{beer.label_image.original}}">
+  </div>
+  <div class="col s6">
+    <h1>{{beer.name}}</h1>
+    <h5>
+        {{beer.description}}
+    </h5>
+    <a ng-href="https://www.averybrewing.com/beers/{{beer.id}}">More Info</a>
+  </div>
 </header>
 <main class="row center-align" ng-show="employees">
     <div class="col s4" ng-repeat="employee in employees">
