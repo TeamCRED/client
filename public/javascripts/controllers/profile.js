@@ -45,6 +45,11 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
             $scope.yay = false;
         }, 4500)
     }
+    $http.get(server + 'buddies/' + $scope.user.id)
+    .then(function (result) {
+      $scope.buddies = result.data;
+      console.log(result.data);
+    });
 });
 
 
