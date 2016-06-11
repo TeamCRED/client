@@ -4,11 +4,16 @@
 }
 
 body {
-  background: url('/assets/circles.png') repeat;
   font-family: 'AdobeGaramondPro', serif;
 }
 
 /*LANDING*/
+
+.landingBackground {
+  background: url('/assets/barrel-room-dark.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
 
 .brand-logo {
   margin-left: 20px;
@@ -30,12 +35,16 @@ nav.landingNav a.logo {
   height: 70px;
 }
 
+nav.landingNav li a {
+  color: white !important;
+}
+
 .landingForm {
   height: 80vh;
 }
 
 a h1 {
-  color: black;
+  color: white;
 }
 
 /*DASHBOARD*/
