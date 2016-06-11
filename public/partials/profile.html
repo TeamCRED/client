@@ -23,7 +23,7 @@
                 <h4>Batches</h4>
             </li>
             <li class="collection-item avatar" ng-repeat="batch in batches" ui-sref="dashboard.batch({batch_id: batch.id})">
-                <img src="../assets/icon01.svg" alt="" class="circle">
+                <img src="{{batch.beer.bottle_image.original}}" alt="beer bottle" class="circle">
                 <span class="title" on-click="batchRedirect()">{{ batch.beer.name }} - {{batch.quote}}</span>
                 <a class="secondary-content">
                   <br  />
