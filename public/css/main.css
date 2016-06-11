@@ -1,27 +1,31 @@
 @font-face {
   font-family: 'AdobeGaramondPro';
-  src: url('/assets/AdobeGaramondProRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('/assets/AdobeGaramondProRegular.ttf')  format('truetype');
 }
 
 body {
   background: url('/assets/circles.png') repeat;
   font-family: 'AdobeGaramondPro', serif;
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
 }
 
-.full-nav {
+.landing-nav {
   width: 100%;
-  padding: 20px;
   background-color: #444;
   color: #fff;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px 0 #888888;
 }
 
 .brand {
   margin-left: 20px;
+  font-size: 1.4em;
+}
+
+.logo {
+  height: 40px;
+  margin: 12px;
+  width: auto;
 }
 
 .check-your-brew-form {
@@ -29,13 +33,9 @@ body {
   max-width: 300px;
 }
 
-label, .btn-custom {
-  margin-top: 20px;
-}
-
 /*SIDE NAV BAR*/
 
-body .row {
+/*body .row {
   margin-bottom: 0;
 }
 
@@ -79,4 +79,4 @@ main section img {
 
 main section h4 {
   margin: 0;
-}
+}*/

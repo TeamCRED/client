@@ -1,0 +1,27 @@
+<header class="row">
+    <div class="col s12 center-align">
+        <img ng-src="{{beer.label_image.original}}">
+
+        <h1>{{beer.name}}</h1>
+        <p>
+            {{beer.description}}
+        </p>
+        <a ng-href="https://www.averybrewing.com/beers/{{beer.id}}">More Info</a>
+    </div>
+</header>
+<main class="row center-align">
+    <div class="col s4" ng-repeat="employee in employees">
+        <section>
+            <img class="circle responsive-img" ng-src="{{employee.image_url}}" alt=""/>
+            <h4>{{employee.first_name}}
+                {{employee.last_name}}</h4>
+            <h5>{{employee.name}}</h5>
+        </section>
+    </div>
+</main>
+<div class="more-info row">
+    <div class="col 12">
+        <img ng-src="http://thumbs.dreamstime.com/x/united-state-army-tank-desert-7218186.jpg" alt="tank"/>
+        <h4>TANK</h4>
+    </div>
+</div>

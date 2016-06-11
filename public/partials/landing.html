@@ -1,35 +1,25 @@
-<md-content class="md-padding full-nav">
-  <md-nav-bar>
-    <md-nav-item md-nav-click="goto('page1')" name="page1" class="brand">Know Your Brew</md-nav-item>
-  </md-nav-bar>
-</md-content>
+<header class="landing-nav">
+  <h1 class="brand">Know Your Brew</h1>
+  <section class="logos">
+    <a href="http://www.averybrewing.com/" target="_blank"><img class="logo" src="/assets/avery-logo.png" alt="Avery Brewing" /></a>
+    <a href="http://www.mondorobot.com/" target="_blank"><img class="logo" src="/assets/mondo-robot-logo.png" alt="Avery Brewing" /></a>
+  </section>
+</header>
 
-<h1>Check Your Brew</h1>
-<form name="check-your-brew-form" class="check-your-brew-form" layout="column" ng-submit="submit()">
-  <md-input-container>
-    <md-select ng-model="brew.beer_id" placeholder="Select a beer">
-      <md-option value="{{ beer.name }}" ng-repeat="beer in beers">{{ beer.name }}</md-option>
-    </md-select>
-  </md-input-container>
-  <md-input-container>
+<div class="container">
+  <h1>Check Your Brew</h1>
+  <form class="check-your-brew-form" ng-submit="submit()">
+    <select ng-model="brew.beer_id" placeholder="Select a beer">
+      <option value="{{ beer.name }}" ng-repeat="beer in beers">{{ beer.name }}</option>
+    </select>
     <label>Quote</label>
     <input name="quote" ng-model="brew.quote" ng-init="quote">
-  </md-input-container>
-  <md-input-container>
     <label>Date</label>
     <input type=date name="date" ng-model="brew.date">
-  </md-input-container>
-  <md-input-container>
     <label>Time of Day</label>
     <input name="time" ng-model="brew.time">
-  </md-input-container>
-  <md-input-container>
     <label>Tank</label>
     <input name="tank" ng-model="brew.tank">
-  </md-input-container>
-  <button type="submit">Submit<button>
-</form>
-
-<div ng-model="data">
-
+    <button type="submit" class="btn-flat">Submit</button>
+  </form>
 </div>
