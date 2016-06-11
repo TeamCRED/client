@@ -37,6 +37,17 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
             })
             .then(function(result) {
                 $scope.awards = result.data;
+                if($scope.awards[0].id != 1) {
+                  for (var i = 0; i < $scope.awards.length; i++) {
+                    if($scope.awards[i].id == 1) {
+                      var ipa = $scope.awards[i];
+                      $scope.awards.splice(i, 0);
+                      $scope.unshift(ipa);
+                      break;
+                    }
+                  }
+                }
+
                 if ($scope.questCompleted && $scope.awards.length == 4) {
                   $scope.awards.unshift({awesome: true})
                 }
