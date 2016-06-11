@@ -1,6 +1,7 @@
 app.controller('MainController', function($scope, $http, $state, Auth, utils){
   $('.tooltipped').tooltip('remove');
   $('.tooltipped').tooltip({delay: 50});
+  $('.materialboxed').materialbox();
 
   $scope.loggedIn = function() {
     var user = Auth.getUser();
@@ -32,12 +33,16 @@ app.controller('MainController', function($scope, $http, $state, Auth, utils){
     let time = $scope.brew.time || '';
     let tank = $scope.brew.tank || '';
 
+    if(date) {
+      date = moment(date).format('MM-DD-YYYY');
+    }
+
     $state.go('dashboard.your-brew', {
       beer_id: $scope.brew.beer_id,
       quote: quote,
       date: date,
       time: time,
-      tank, tank
+      tank: tank
     });
   }
 });
