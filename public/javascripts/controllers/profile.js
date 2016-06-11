@@ -42,7 +42,7 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
                     if($scope.awards[i].id == 1) {
                       var ipa = $scope.awards[i];
                       $scope.awards.splice(i, 0);
-                      $scope.unshift(ipa);
+                      $scope.awards.unshift(ipa);
                       break;
                     }
                   }
