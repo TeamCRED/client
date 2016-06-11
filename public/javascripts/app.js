@@ -37,5 +37,10 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: '/signup',
       templateUrl: 'partials/signup.html',
       controller: 'signup'
-    });
+    })
+    .state('add-beer', {
+      url: '/beer',
+      templateUrl: 'partials/beer.html',
+      controller: 'MainController'
+    })
   });
