@@ -1,5 +1,5 @@
 app.factory('utils', function () {
   return {
-    server: 'http://localhost:3000/'
+    server: 'https://know-your-can.herokuapp.com/'
   }
 });
