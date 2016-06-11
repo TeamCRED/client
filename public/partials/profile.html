@@ -25,7 +25,7 @@
             <li class="collection-item avatar" ng-repeat="batch in batches" ui-sref="dashboard.batch({batch_id: batch.id})">
                 <img src="../assets/icon01.svg" alt="" class="circle">
                 <span class="title" on-click="batchRedirect()">{{ batch.beer.name }} - {{batch.quote}}</span>
-                <a href="#!" class="secondary-content">
+                <a class="secondary-content">
                   <br  />
                   <br  />
                   <i>{{batch.date | date}} {{batch.time}}</i>
@@ -37,7 +37,7 @@
                 <h4>Badges</h4>
             </li>
             <li class="collection-item avatar" ng-repeat="award in awards">
-                <img src="{{award.image_url}}" alt="award icon" class="circle award-icon">
+                <img ng-src="{{award.image_url}}" alt="award icon" class="circle award-icon">
                 <span class="title">{{award.name}}</span>
                 <a class="secondary-content">
                     <i>{{award.points}}pts</i>
@@ -51,7 +51,7 @@
             <li class="collection-item avatar" ng-repeat="employee in employees">
                 <img ng-src="{{employee.image_url}}" alt="" class="circle">
                 <span class="title"><em>{{employee.description}}</em> - {{ employee.first_name }} {{employee.last_name}}</span>
-                <a href="#!" class="secondary-content">
+                <a class="secondary-content">
                   <br  />
                   <br  />
                   <i>{{employee.name}} <span ng-if="employee.count > 1"> - {{employee.count}} batches</span></i>
@@ -64,8 +64,9 @@
                 <h4>Batch Buddies</h4>
             </li>
             <li class="collection-item avatar" ng-repeat="buddy in buddies">
+                <img ng-src="{{buddy.image_url}}" alt="buddy avatar" class="circle buddy-icon">
                 <span class="title">{{buddy.first_name}} {{buddy.last_name}}</span>
-                <a href="#!" class="secondary-content">
+                <a class="secondary-content">
                   <br  />
                   <br  />
                   <i>{{buddy.count}}
