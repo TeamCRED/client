@@ -2,7 +2,8 @@ app.controller('user', function($scope, $http, $state, Auth, $location, $timeout
   var award = 'http://localhost:3000/awards';
   var server = 'http://localhost:3000/';
   $scope.user = Auth.getUser();
-
+  $('.tooltipped').tooltip('remove');
+  $('.tooltipped').tooltip({delay: 50});
   if (!$scope.user || typeof $stateParams.id == 'undefined') {
     $state.go('dashboard.login');
   } else if ($stateParams.id) {

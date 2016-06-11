@@ -1,5 +1,7 @@
 app.controller('yourBrew', function($scope, $http, $stateParams, Auth, $location, $state) {
   $('.tooltipped').tooltip('remove');
+  $('.tooltipped').tooltip({delay: 50});
+
   var server = 'http://localhost:3000/';
   var redirect = JSON.parse(localStorage.getItem('redirect'));
   if (redirect) {

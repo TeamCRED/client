@@ -1,5 +1,6 @@
 app.controller('MainController', function($scope, $http, $state, Auth){
   $('.tooltipped').tooltip('remove');
+  $('.tooltipped').tooltip({delay: 50});
 
   $scope.loggedIn = function() {
     var user = Auth.getUser();

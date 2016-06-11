@@ -1,5 +1,6 @@
 app.controller('signup', function ($scope, Auth, $state) {
   $('.tooltipped').tooltip('remove');
+  $('.tooltipped').tooltip({delay: 50});
   $scope.user = {};
   $scope.signup = function() {
     $scope.loading = true;

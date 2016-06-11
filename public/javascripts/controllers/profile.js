@@ -9,6 +9,7 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
       }
     }
     $('.tooltipped').tooltip('remove');
+    $('.tooltipped').tooltip({delay: 50});
     $scope.questCompleted = JSON.parse(localStorage.getItem('quest'));
     var redirect = JSON.parse(localStorage.getItem('redirect'));
     if ($scope.questCompleted && redirect) {

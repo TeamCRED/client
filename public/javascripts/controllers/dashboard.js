@@ -1,7 +1,6 @@
 app.controller('dashboard', function($scope, $http, Auth){
   $('.tooltipped').tooltip('remove');
   $scope.user = Auth.getUser();
-
   $('.tooltipped').tooltip({delay: 50});
 
   $scope.getBatch = function(){
