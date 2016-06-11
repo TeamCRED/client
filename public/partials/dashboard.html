@@ -1,9 +1,43 @@
-<h1>DASHBOARD</h1>
+<div class="row">
+  <div class="col s1">
+    <nav class="side">
+      <ul>
+        <li><a href="/#/dashboard">Dashboard</a></li>
+      </ul>
+      <ul>
+        <li><a href="/#/profile">Profile</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- <div class="container"> -->
+    <div class="col s11">
+      <section class="dashboard">
+        <header class="row">
+          <div class="col s12">
+            <img ng-src="{{beer.label_image.original}}">
 
-<img ng-src="{{beer.label_image.original}}">
-
-<h1>{{beer.name}}</h1>
-
-<p>
-  {{beer.description}}
-</p>
+            <h1>{{beer.name}}</h1>
+            <p>
+              {{beer.description}}
+            </p>
+            <a ng-href="https://www.averybrewing.com/beers/{{beer.id}}">More Info</a>
+          </div>
+        </header>
+        <main class="row">
+          <div class="col s4" ng-repeat="employee in employees">
+            <section>
+              <img ng-src="http://i.imgur.com/9TcRc.png" alt="" />
+              <h4>{{employee.first_name}} {{employee.last_name}}</h4>
+            </section>
+          </div>
+        </main>
+        <div class="more-info row">
+          <div class="col 12">
+            <img ng-src="http://thumbs.dreamstime.com/x/united-state-army-tank-desert-7218186.jpg" alt="tank" />
+            <h4>TANK</h4>
+          </div>
+        </div>
+      </section>
+    </div>
+  <!-- </div> -->
+</div>

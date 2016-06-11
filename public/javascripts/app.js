@@ -1,4 +1,4 @@
-var app = angular.module('knowYourBrewApp', ['ui.router', 'ngAnimate', 'ngMaterial']);
+var app = angular.module('knowYourBrewApp', ['ui.router', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
@@ -6,6 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     .state('landing', {
       url: '/',
       templateUrl: 'partials/landing.html',
+      controller: 'MainController'
     })
     .state('dashboard', {
       url: '/dashboard',
