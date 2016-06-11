@@ -9,17 +9,16 @@ body {
   background: url('/assets/circles.png') repeat;
 }
 
+.col {
+  padding: 0 !important;
+}
+
 /*LANDING*/
 
 .landingBackground {
   background: url('/assets/barrel-room-dark.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
-}
-
-.brand-logo {
-  margin-left: 20px;
-  font-size: 1.4em;
 }
 
 .logo {
@@ -31,6 +30,7 @@ body {
 nav.landingNav {
   background: none;
   box-shadow: none;
+  margin-bottom: 40px;
 }
 
 nav.landingNav a.logo {
@@ -50,13 +50,24 @@ nav.landingNav li a {
   color: #333;
 }
 
+.landingForm img {
+  width: 90%;
+  height: auto;
+}
+
+.landingForm button {
+  margin-top: 20px;
+}
+
 .input-field input[type=text]:focus + label {
     color: red;
 }
 
 .input-field input[type=text]:focus,
+.input-field input[type=password]:focus,
+.input-field input[type=email]:focus,
 .input-field input[type=date]:focus {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #f44336;
   box-shadow: 0 1px 0 0 #000;
 }
 
@@ -83,6 +94,7 @@ a h1 {
 
 .left-nav .button a {
   width: 100%;
+  border-radius: 5px;
 }
 
 .left-nav img {

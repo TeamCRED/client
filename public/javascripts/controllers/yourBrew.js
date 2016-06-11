@@ -1,4 +1,5 @@
 app.controller('yourBrew', function($scope, $http, $stateParams){
+  $('.tooltipped').tooltip('remove');
   var server = 'http://localhost:3000/';
 
   if($stateParams.batch_id) {
