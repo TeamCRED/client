@@ -1,4 +1,7 @@
-<header class="row">
+<div class="row center-align" ng-show="loading">
+  <img src="assets/loading.gif" alt="" />
+</div>
+<header class="row" ng-show="!loading">
     <div class="col s12 center-align">
         <img style="height:400px;width:auto;" ng-src="{{beer.label_image.original}}">
         <h1>{{beer.name}}</h1>
@@ -8,7 +11,7 @@
         <a ng-href="https://www.averybrewing.com/beers/{{beer.id}}">More Info</a>
     </div>
 </header>
-<main class="row center-align">
+<main class="row center-align" ng-show="employees">
     <div class="col s4" ng-repeat="employee in employees">
         <section>
             <img class="circle responsive-img" ng-src="{{employee.image_url}}" alt=""/>
@@ -17,8 +20,11 @@
             <h5>{{employee.name}}</h5>
         </section>
     </div>
-</main>
-<div class="more-info row">
-    <div class="col 12">
+    <div class="more-info row">
+        <div class="col 12">
+        </div>
     </div>
-</div>
+</main>
+<main class="row center-align" ng-show="!loading && !employees">
+  <h1>No brew data found. :(</h1>
+</main>

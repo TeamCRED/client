@@ -1,4 +1,7 @@
-<div class="container row">
+<div class="row center-align" ng-show="loading">
+  <img src="assets/loading.gif" alt="" />
+</div>
+<div class="container row" ng-show="!loading">
   <form class="col s12" ng-submit="login()">
     <div class="row">
       <div class="input-field col s12">
