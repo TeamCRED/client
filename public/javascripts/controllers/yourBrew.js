@@ -47,4 +47,10 @@ app.controller('yourBrew', function($scope, $http, $stateParams){
         $scope.loading = false;
       })
   }
+
+  $http.get(server + 'buddies/' + $scope.user.id)
+  .then(function (result) {
+    $scope.buddies = result.data;
+    console.log(result.data);
+  });
 });
