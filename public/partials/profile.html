@@ -28,7 +28,7 @@
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />
-                  <i class="material-icons">{{batch.date | date}} {{batch.time}}</i>
+                  <i>{{batch.date | date}} {{batch.time}}</i>
                 </a>
             </li>
         </ul>
@@ -40,7 +40,7 @@
                 <img src="../assets/icon01.svg" alt="" class="circle">
                 <span class="title">{{award.name}}</span>
                 <a class="secondary-content">
-                    <i class="material-icons">{{award.points}}pts</i>
+                    <i>{{award.points}}pts</i>
                 </a>
             </li>
         </ul>
@@ -54,7 +54,7 @@
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />
-                  <i class="material-icons">{{employee.name}} <span ng-if="employee.count > 1"> - {{employee.count}} batches</span></i>
+                  <i>{{employee.name}} <span ng-if="employee.count > 1"> - {{employee.count}} batches</span></i>
                 </a>
             </li>
         </ul>
@@ -68,7 +68,7 @@
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />
-                  <i class="material-icons">{{buddy.count}}
+                  <i>{{buddy.count}}
                     <ng-pluralize count="buddy.count"
                  when="{'one': 'batch',
                      'other': 'batches'}">
