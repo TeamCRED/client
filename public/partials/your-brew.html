@@ -20,6 +20,7 @@
     <h5>
         {{beer.description}}
     </h5>
+    <br>
     <a ng-href="https://www.averybrewing.com/beers/{{beer.id}}">More Info</a>
   </div>
 </header>
@@ -34,8 +35,36 @@
         </section>
     </div>
     <div class="more-info row">
-        <div class="col 12">
-        </div>
+        <section class="col s6">
+          <img class="circle responsive-img" src="http://ww1.prweb.com/prfiles/2006/01/17/334317/NewTank3.jpg" alt="" />
+          <h4>Tank</h4>
+          <h5>{{batch.tank}}</h5>
+        </section>
+        <section class="col s6">
+          <ul class="collection with-header">
+              <li class="collection-header"><h4>Drinking Buddies</h4></li>
+             <li class="collection-item avatar">
+               <img src="../assets/icon01.svg" alt="" class="circle">
+               <span class="title">Name of Player</span>
+               <a href="#!" class="secondary-content"><i class="material-icons">500pts</i></a>
+             </li>
+             <li class="collection-item avatar">
+               <img src="../assets/icon01.svg" alt="" class="circle">
+               <span class="title">Name of Player</span>
+               <a href="#!" class="secondary-content"><i class="material-icons">20pts</i></a>
+             </li>
+             <li class="collection-item avatar">
+               <img src="../assets/icon01.svg" alt="" class="circle">
+               <span class="title">Name of Player</span>
+               <a href="#!" class="secondary-content"><i class="material-icons">120pts</i></a>
+             </li>
+             <li class="collection-item avatar">
+               <img src="../assets/icon01.svg" alt="" class="circle">
+               <span class="title">Name of Player</span>
+               <a href="#!" class="secondary-content"><i class="material-icons">430pts</i></a>
+             </li>
+           </ul>
+        </section>
     </div>
 </main>
 <main class="row center-align" ng-show="!loading && !employees">
