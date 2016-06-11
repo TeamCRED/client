@@ -15,4 +15,10 @@ app.controller('dashboard', function($scope, $http, Auth){
     return user ? user.email : null;
   }
 
+  $scope.showGraphic = false;
+
+  $scope.toggleGraphic = function(){
+    $scope.showGraphic = ! $scope.showGraphic
+  }
+
 });
