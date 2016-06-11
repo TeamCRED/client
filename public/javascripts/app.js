@@ -1,6 +1,6 @@
 var app = angular.module('knowYourBrewApp', ['ui.router', 'ngAnimate', 'ngMaterial']);
 
-app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider){
+app.config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
   $stateProvider
     .state('landing', {
@@ -23,8 +23,4 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider){
       url: '/login',
       templateUrl: 'partials/login.html'
     });
-
-  // $mdThemingProvider.theme('default')
-  //   .dark();
-  //
   });
