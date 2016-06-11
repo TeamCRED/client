@@ -7,8 +7,6 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth){
       $scope.buddies = result.data;
       console.log(result.data);
     });
-  } else {
-    
   }
   if($stateParams.batch_id) {
     $scope.loading = true;
@@ -53,8 +51,6 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth){
           $scope.message = "Brew not found! :(";
         }
         $scope.loading = false;
-      })
-  }
-
+      }).then(function(){
 
 });

@@ -171,6 +171,11 @@ main .more-info section.col {
   z-index: 2000;
 }
 
+.award-icon {
+  width: 60px;
+  height: 60px;
+}
+  
 /*REDEEM*/
 
 .walt {
