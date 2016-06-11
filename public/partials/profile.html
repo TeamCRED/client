@@ -25,7 +25,7 @@
             <li class="collection-header">
                 <h4>Batches</h4>
             </li>
-            <li class="collection-item avatar" ng-repeat="batch in batches">
+            <li class="collection-item avatar" ng-repeat="batch in batches" ui-sref="dashboard.batch({batch_id: batch.id})">
                 <img src="../assets/icon01.svg" alt="" class="circle">
                 <span class="title">{{ batch.beer.name }} - {{batch.quote}}</span>
                 <a href="#!" class="secondary-content">
@@ -49,11 +49,11 @@
         </ul>
         <ul class="collection with-header col s12 m6">
             <li class="collection-header">
-                <h4>Avery Employees</h4>
+                <h4>Batch Crew Connections</h4>
             </li>
             <li class="collection-item avatar" ng-repeat="employee in employees">
                 <img ng-src="{{employee.image_url}}" alt="" class="circle">
-                <span class="title">{{ employee.first_name }} {{employee.last_name}}</span>
+                <span class="title"><em>{{employee.description}}</em> - {{ employee.first_name }} {{employee.last_name}}</span>
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />
