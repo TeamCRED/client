@@ -17,11 +17,7 @@
             </div>
         </div>
     </div>
-    <div ng-show="!loading && awards.length === 0">
-        <h2>Drink up!</h2>
-        <h2>You have not earned any badges yet. :(</h2>
-    </div>
-    <div class="row" ng-show="!loading && awards.length > 0">
+    <div class="row" ng-show="!loading">
         <ul class="collection with-header col s12 m6">
             <li class="collection-header">
                 <h4>Batches</h4>
@@ -32,7 +28,7 @@
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />
-                  <i class="material-icons">{{batch.date | date}} {{batch.time}}</i>
+                  <i>{{batch.date | date}} {{batch.time}}</i>
                 </a>
             </li>
         </ul>
@@ -44,7 +40,7 @@
                 <img src="{{award.image_url}}" alt="award icon" class="circle award-icon">
                 <span class="title">{{award.name}}</span>
                 <a class="secondary-content">
-                    <i class="material-icons">{{award.points}}pts</i>
+                    <i>{{award.points}}pts</i>
                 </a>
             </li>
         </ul>
@@ -58,7 +54,7 @@
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />
-                  <i class="material-icons">{{employee.name}}</i>
+                  <i>{{employee.name}} <span ng-if="employee.count > 1"> - {{employee.count}} batches</span></i>
                 </a>
             </li>
         </ul>
@@ -72,7 +68,7 @@
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />
-                  <i class="material-icons">{{buddy.count}}
+                  <i>{{buddy.count}}
                     <ng-pluralize count="buddy.count"
                  when="{'one': 'batch',
                      'other': 'batches'}">

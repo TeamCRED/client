@@ -6,7 +6,8 @@
 body {
   font-family: 'AdobeGaramondPro', serif;
   color: #595353;
-  background: url('/assets/circles.png') repeat;
+  /*background: url('/assets/circles.png') repeat;*/
+  background: white;
 }
 
 body .row .col {
@@ -40,6 +41,7 @@ nav.landingNav a.logo {
 nav.landingNav li a {
   color: white !important;
 }
+/* Landing Form */
 
 .landingForm {
   height: 80vh;
@@ -47,7 +49,7 @@ nav.landingNav li a {
 }
 
 .landingForm select {
-  color: #333;
+  color: #595353;
 }
 
 .landingForm img {
@@ -59,8 +61,31 @@ nav.landingNav li a {
   margin-top: 20px;
 }
 
+/* Beer Form */
+.beerForm {
+  height: 80vh;
+  color: black;
+}
+
+.beerForm select {
+  color: black;
+}
+
+.beerForm img {
+  width: 90%;
+  height: auto;
+}
+
+.beerForm button {
+  margin-top: 20px;
+}
+
+.button a {
+  color: black;
+}
+
 .input-field input[type=text]:focus + label {
-    color: red;
+  color: red;
 }
 
 .input-field input[type=text]:focus,
@@ -79,7 +104,8 @@ a h1 {
 .left-nav {
   background: white;
   height: 100vh;
-  border-right: solid 1px #333;
+  border-right: solid 1px #595353;
+  position: relative;
 }
 
 .left-nav .button {
@@ -87,7 +113,7 @@ a h1 {
   width: 100%;
   text-align: center;
   vertical-align: middle;
-  border-bottom: solid 1px #333;
+  border-bottom: solid 1px #595353;
 }
 
 .left-nav .button a {
@@ -99,6 +125,12 @@ a h1 {
 .left-nav img {
   width: 100%;
   height: 60px;
+}
+
+.left-nav .bottom-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .dashboardBanner {
@@ -142,4 +174,18 @@ main .more-info section.col {
 .award-icon {
   width: 60px;
   height: 60px;
+}
+  
+/*REDEEM*/
+
+.walt {
+  width: 200px;
+}
+
+.swag {
+  margin: 5%;
+}
+
+.swag img {
+  height: 150px;
 }

@@ -46,26 +46,19 @@
         <section class="col s6">
           <ul class="collection with-header">
               <li class="collection-header"><h4>Batch Buddies</h4></li>
-             <li class="collection-item avatar">
-               <img src="../assets/icon01.svg" alt="" class="circle">
-               <span class="title">Name of Player</span>
-               <a href="#!" class="secondary-content"><i class="material-icons">500pts</i></a>
-             </li>
-             <li class="collection-item avatar">
-               <img src="../assets/icon01.svg" alt="" class="circle">
-               <span class="title">Name of Player</span>
-               <a href="#!" class="secondary-content"><i class="material-icons">20pts</i></a>
-             </li>
-             <li class="collection-item avatar">
-               <img src="../assets/icon01.svg" alt="" class="circle">
-               <span class="title">Name of Player</span>
-               <a href="#!" class="secondary-content"><i class="material-icons">120pts</i></a>
-             </li>
-             <li class="collection-item avatar">
-               <img src="../assets/icon01.svg" alt="" class="circle">
-               <span class="title">Name of Player</span>
-               <a href="#!" class="secondary-content"><i class="material-icons">430pts</i></a>
-             </li>
+             <li class="collection-item avatar" ng-repeat="buddy in buddies">
+               <span class="title">{{buddy.first_name}} {{buddy.last_name}}</span>
+               <a href="#!" class="secondary-content">
+                 <br  />
+                 <br  />
+                 <i>{{buddy.count}}
+                   <ng-pluralize count="buddy.count"
+                when="{'one': 'batch',
+                    'other': 'batches'}">
+                  </ng-pluralize>
+                    in common</i>
+               </a>
+           </li>
            </ul>
         </section>
     </div>

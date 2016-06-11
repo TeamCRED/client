@@ -45,6 +45,14 @@ app.controller('yourBrew', function($scope, $http, $stateParams){
           $scope.message = "Brew not found! :(";
         }
         $scope.loading = false;
-      })
-  }
-});
+      }).then(function(){
+
+        $http.get(server + 'batch/' +$scope.batch.id + '/buddies/' +$scope.user.id)
+        .then(function (result) {
+          $scope.buddies = result.data;
+          console.log(result.data);
+        });
+      });
+
+      }
+    })
