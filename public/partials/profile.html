@@ -1,5 +1,6 @@
+<canvas ng-show="yay" id="canvas"></canvas>
 <div class="container">
-    <h1>{{user.first_name}}
+    <h1 ng-click="confetti()">{{user.first_name}}
         {{user.last_name}}</h1>
     <div class="row center-align" ng-show="loading">
         <div class="preloader-wrapper big active">
