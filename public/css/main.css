@@ -42,6 +42,21 @@ nav.landingNav li a {
 
 .landingForm {
   height: 80vh;
+  color: white;
+}
+
+.landingForm select {
+  color: #333;
+}
+
+.input-field input[type=text]:focus + label {
+    color: red;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=date]:focus {
+  border-bottom: 1px solid red;
+  box-shadow: 0 1px 0 0 #000;
 }
 
 a h1 {
