@@ -12,6 +12,7 @@
     <header class="landing-nav" ng-controller="nav">
       <h1 class="brand" ui-sref="landing">Know Your Brew</h1>
       <section class="logos valign-wrapper">
+        <a ng-if="!loggedIn()" class="waves-effect waves-light btn valign" ui-sref="signup">Signup</a>
         <a ng-if="!loggedIn()" class="waves-effect waves-light btn valign" ui-sref="login">Login</a>
         <a ng-if="loggedIn()" class="waves-effect waves-light btn valign" ui-sref="dashboard.profile">Profile</a>
         <a ng-if="loggedIn()" class="waves-effect waves-light btn valign" ng-click="logOut()">Log Out</a>
@@ -29,6 +30,7 @@
     <script type="text/javascript" src="javascripts/controllers/nav.js"></script>
     <script type="text/javascript" src="javascripts/controllers/landing.js"></script>
     <script type="text/javascript" src="javascripts/services/Auth.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/signup.js"></script>
     <script type="text/javascript" src="javascripts/controllers/login.js"></script>
     <script type="text/javascript" src="javascripts/controllers/yourBrew.js"></script>
     <script type="text/javascript" src="javascripts/controllers/dashboard.js"></script>

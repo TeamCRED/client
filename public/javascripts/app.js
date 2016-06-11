@@ -26,5 +26,10 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: '/login',
       templateUrl: 'partials/login.html',
       controller: 'login'
+    })
+    .state('signup', {
+      url: '/signup',
+      templateUrl: 'partials/signup.html',
+      controller: 'signup'
     });
   });

@@ -19,8 +19,16 @@ app.factory('Auth', function($http){
     })
   }
 
+  function signup(user) {
+    return $http.post(server + 'signup', user).then(function (result) {
+      localStorage.token = result.data.token;
+      return getUser();
+    });
+  }
+
   return {
     getUser: getUser,
-    login: login
+    login: login,
+    signup: signup
   }
 });

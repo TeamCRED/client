@@ -3,6 +3,7 @@ app.controller('profile', function($scope, $http, Auth) {
 
   $scope.user = Auth.getUser();
   console.log($scope.user);
+  $scope.loading = true;
 
   $http.get(award, {
       headers: {
@@ -11,6 +12,7 @@ app.controller('profile', function($scope, $http, Auth) {
     })
     .then(function(result) {
       $scope.awards = result.data;
+      $scope.loading = false;
       console.log($scope.awards);
     });
 });

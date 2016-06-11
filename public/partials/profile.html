@@ -1,21 +1,40 @@
 <div class="container">
   <h1>{{user.first_name}} {{user.last_name}}</h1>
   <hr>
-  <h1>Awards</h1>
-  <div class="row">
-    <div class="col s6">
-      <h2><em>Award</em></h2>
-    </div>
-    <div class="col s6">
-      <h3><em>Points</em></h3>
+  <div class="row center-align" ng-show="loading">
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row" ng-repeat="award in awards">
-    <div class="col s6">
-      <h2>{{award.name}}</h2>
+  <div ng-show="!loading && awards.length === 0">
+    <h2>Drink up!</h2>
+    <h2>You have not earned any awards yet. :(</h2>
+  </div>
+  <div ng-show="!loading && awards.length > 0">
+    <h1>Awards</h1>
+    <div class="row">
+      <div class="col s6">
+        <h2><em>Award</em></h2>
+      </div>
+      <div class="col s6">
+        <h3><em>Points</em></h3>
+      </div>
     </div>
-    <div class="col s6">
-      <h3>{{award.points}}</h3>
+    <div class="row" ng-repeat="award in awards">
+      <div class="col s6">
+        <h2>{{award.name}}</h2>
+      </div>
+      <div class="col s6">
+        <h3>{{award.points}}</h3>
+      </div>
     </div>
   </div>
 </div>
