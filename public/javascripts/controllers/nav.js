@@ -6,6 +6,6 @@ app.controller('nav', function ($scope, Auth, $state) {
 
   $scope.logOut = function () {
     localStorage.clear();
-    $state.go('landing');
+    $state.go('dashboard.landing');
   }
 })

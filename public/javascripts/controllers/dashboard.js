@@ -10,4 +10,9 @@ app.controller('dashboard', function($scope, $http, Auth){
     return localStorage.getItem('batchData')
   }
 
+  $scope.loggedIn = function() {
+    var user = Auth.getUser();
+    return user ? user.email : null;
+  }
+
 });

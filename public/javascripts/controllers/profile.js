@@ -8,7 +8,7 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
         $location.path('/dashboard/your-brew?beer_id=white-rascal&tank=B4')
     }
     if (!$scope.user) {
-        $state.go('login');
+        $state.go('dashboard.login');
     } else {
         $scope.loading = true;
 

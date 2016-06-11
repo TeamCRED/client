@@ -1,19 +1,6 @@
-<div class="row">
-  <div class="col s1 left-nav"  ng-if="loggedIn()">
-    <div class="row button">
-      <a class="waves-effect waves-red tooltipped" ui-sref="dashboard.profile" data-position="right" data-delay="50" data-tooltip="Profile">
-        <img src="../assets/icon05.svg" alt="profile" />
-      </a>
-    </div>
-    <div class="row button">
-      <a class="waves-effect waves-red tooltipped" ui-sref="dashboard.batch({batch_id: getBatch()})" data-position="right" data-delay="50" data-tooltip="Beer">
-        <img src="../assets/icon07.svg" alt="profile" />
-      </a>
-    </div>
-  </div>
-<div class="landingBackground col" ng-class="{s11: loggedIn(), s12: !loggedIn()}">
+<div class="landingBackground">
   <nav class="landingNav" ng-controller="nav">
-    <a ui-sref="landing" class="brand-logo center">
+    <a ui-sref="dashboard.landing" class="brand-logo center">
       <h1 class="center-align">Meet Your Brew</h1>
       <h3 class="tagline">Every can has a story.</h3>
     </a>
@@ -22,8 +9,8 @@
       <li><a class="logo" href="http://www.mondorobot.com/" target="_blank"><img class="logo" src="/assets/mondo-robot-logo.png" alt="Avery Brewing" /></a></li>
     </ul>
     <ul id="nav-mobile" class="right">
-      <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text " ui-sref="signup">Signup</a></li>
-      <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text" ui-sref="login">Login</a></li>
+      <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text " ui-sref="dashboard.signup">Signup</a></li>
+      <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text" ui-sref="dashboard.login">Login</a></li>
       <li><a ng-if="loggedIn()" class="waves-effect waves-light black-text " ui-sref="dashboard.profile">Profile</a></li>
       <li><a ng-if="loggedIn()" class="waves-effect waves-light black-text " ng-click="logOut()">Log Out</a></li>
     </ul>
@@ -78,5 +65,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>
