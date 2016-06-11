@@ -28,6 +28,11 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'partials/your-brew.html',
       controller: 'yourBrew'
     })
+    .state('redeem', {
+      url: '/redeem',
+      templateUrl: 'partials/redeem.html',
+      controller: 'redeem'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'partials/login.html',
