@@ -1,11 +1,10 @@
 <header class="row">
     <div class="col s12 center-align">
-        <img ng-src="{{beer.label_image.original}}">
-
+        <img style="height:400px;width:auto;" ng-src="{{beer.label_image.original}}">
         <h1>{{beer.name}}</h1>
-        <p>
+        <h5>
             {{beer.description}}
-        </p>
+        </h5>
         <a ng-href="https://www.averybrewing.com/beers/{{beer.id}}">More Info</a>
     </div>
 </header>

@@ -7,19 +7,53 @@
 </header>
 
 <div class="container">
-  <h1>Check Your Brew</h1>
-  <form class="check-your-brew-form" ng-submit="submit()">
-    <select ng-model="brew.beer_id" placeholder="Select a beer">
-      <option value="{{ beer.name }}" ng-repeat="beer in beers">{{ beer.name }}</option>
-    </select>
-    <label>Quote</label>
-    <input name="quote" ng-model="brew.quote" ng-init="quote">
-    <label>Date</label>
-    <input type=date name="date" ng-model="brew.date">
-    <label>Time of Day</label>
-    <input name="time" ng-model="brew.time">
-    <label>Tank</label>
-    <input name="tank" ng-model="brew.tank">
-    <button type="submit" class="btn-flat">Submit</button>
-  </form>
+  <h1 class="center-align">Know Your Brew</h1>
+  <div class="row">
+    <form class="col s12" ng-submit="submit()">
+      <div class="row">
+        <div class="input-field col s12">
+          <label>Beer</label>
+          <br>
+          <br>
+          <select ng-model="brew.beer_id" class="browser-default">
+            <option value="" disabled selected>Select a Beer</option>
+            <option value="{{ beer.id }}" ng-repeat="beer in beers">{{ beer.name }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="quote" type="text" class="validate" ng-model="brew.quote">
+          <label for="quote">Quote</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <label for="date">Date</label>
+          <br>
+          <br>
+          <input id="date" type="date" class="validate" ng-model="brew.date">
+        </div>
+        <div class="input-field col s6">
+          <label for="time">Time</label>
+          <br>
+          <br>
+          <input id="time" type="time" class="validate" ng-model="brew.time">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <label for="tank">Tank</label>
+          <br>
+          <br>
+          <input id="tank" type="text" class="validate" ng-model="brew.tank">
+        </div>
+      </div>
+      <div class="row">
+        <div class="center-align">
+          <button class="btn waves-effect waves-light" type="submit">Know Your Brew</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

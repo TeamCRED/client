@@ -10,8 +10,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     .state('dashboard', {
       url: '/dashboard',
-      templateUrl: 'partials/dashboard.html',
-      controller: 'dashboard'
+      templateUrl: 'partials/dashboard.html'
     })
     .state('dashboard.profile', {
       url: '/profile',
@@ -19,8 +18,9 @@ app.config(function($stateProvider, $urlRouterProvider){
       controller: 'profile'
     })
     .state('dashboard.your-brew', {
-      url: '/your-brew',
-      templateUrl: 'partials/your-brew.html'
+      url: '/your-brew?beer_id&quote&date&time&tank',
+      templateUrl: 'partials/your-brew.html',
+      controller: 'yourBrew'
     })
     .state('login', {
       url: '/login',

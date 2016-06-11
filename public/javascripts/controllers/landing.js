@@ -1,9 +1,10 @@
-app.controller('MainController', function($scope, $http){
+app.controller('MainController', function($scope, $http, $state){
   var server = 'http://localhost:3000/';
 
   $http.get(server + 'beers')
     .then(function(result){
       $scope.beers = result.data;
+      console.log($scope.beers);
     })
 
 
@@ -15,15 +16,12 @@ app.controller('MainController', function($scope, $http){
     let time = $scope.brew.time || '';
     let tank = $scope.brew.tank || '';
 
-    $http.get(
-      server + 'batch?beer_id=' + $scope.brew.beer_id
-      + '&quote=' + quote
-      + '&date=' + date
-      + '&time=' + time
-      + '&tank=' + tank)
-      .then(function(result) {
-        $scope.data = result.data
-        console.log(result);
-      })
+    $state.go('dashboard.your-brew', {
+      beer_id: $scope.brew.beer_id,
+      quote: quote,
+      date: date,
+      time: time,
+      tank, tank
+    });
   }
 });
