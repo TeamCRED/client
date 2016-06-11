@@ -36,7 +36,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     .state('dashboard.addBeer', {
       url: '/addBeer',
       templateUrl: 'partials/addBeer.html',
-      controller: 'addBeer'
+      controller: 'MainController'
     })
     .state('dashboard.login', {
       url: '/login',
@@ -47,5 +47,5 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: '/signup',
       templateUrl: 'partials/signup.html',
       controller: 'signup'
-    });
+    })
   });

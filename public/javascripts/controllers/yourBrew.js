@@ -1,7 +1,15 @@
-app.controller('yourBrew', function($scope, $http, $stateParams){
+app.controller('yourBrew', function($scope, $http, $stateParams, Auth){
   $('.tooltipped').tooltip('remove');
   var server = 'http://localhost:3000/';
-
+  if (Auth.getUser()) {
+    $http.get(server + 'buddies/' + Auth.getUser().id)
+    .then(function (result) {
+      $scope.buddies = result.data;
+      console.log(result.data);
+    });
+  } else {
+    
+  }
   if($stateParams.batch_id) {
     $scope.loading = true;
     $http.get(server + 'batch/' + $stateParams.batch_id)
@@ -47,4 +55,6 @@ app.controller('yourBrew', function($scope, $http, $stateParams){
         $scope.loading = false;
       })
   }
+
+
 });

@@ -41,6 +41,7 @@ nav.landingNav a.logo {
 nav.landingNav li a {
   color: white !important;
 }
+/* Landing Form */
 
 .landingForm {
   height: 80vh;
@@ -60,12 +61,31 @@ nav.landingNav li a {
   margin-top: 20px;
 }
 
+/* Beer Form */
+.beerForm {
+  height: 80vh;
+  color: black;
+}
+
+.beerForm select {
+  color: black;
+}
+
+.beerForm img {
+  width: 90%;
+  height: auto;
+}
+
+.beerForm button {
+  margin-top: 20px;
+}
+
 .button a {
   color: black;
 }
 
 .input-field input[type=text]:focus + label {
-    color: red;
+  color: red;
 }
 
 .input-field input[type=text]:focus,
@@ -118,7 +138,7 @@ a h1 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://d1h6bqmdexfe1t.cloudfront.net/uploads/header_image/image/11/desktop2x_1454200976_Featured-Beer-Header.jpg);
   background-size: cover;
   color: white;
-  height: 50vh;
+  height: 60vh;
 }
 
 .dashboardBanner a {

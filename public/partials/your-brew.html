@@ -22,6 +22,11 @@
     </h5>
     <br>
     <a ng-href="https://www.averybrewing.com/beers/{{beer.id}}">More Info</a>
+    <div ng-if="!loggedIn()">
+      <h4>Login or Signup to Save Your Batches</h4>
+      <a class="waves-effect waves-light btn red" ui-sref="dashboard.signup">Signup</a>
+      <a class="waves-effect waves-light btn red" ui-sref="dashboard.login">Login</a>
+    </div>
   </div>
 </header>
 <main class="row center-align" ng-show="employees">
@@ -38,34 +43,27 @@
       </div>
     </div>
     <div class="more-info row">
-        <section class="col s6">
+        <section class="col" ng-class="{s12: !loggedIn(), s6: loggedIn()}">
           <img class="circle responsive-img" src="http://ww1.prweb.com/prfiles/2006/01/17/334317/NewTank3.jpg" alt="" />
           <h4>Tank</h4>
           <h5>{{batch.tank}}</h5>
         </section>
-        <section class="col s6">
+        <section class="col s6" ng-if="loggedIn()">
           <ul class="collection with-header">
               <li class="collection-header"><h4>Batch Buddies</h4></li>
-             <li class="collection-item avatar">
-               <img src="../assets/icon01.svg" alt="" class="circle">
-               <span class="title">Name of Player</span>
-               <a href="#!" class="secondary-content"><i class="material-icons">500pts</i></a>
-             </li>
-             <li class="collection-item avatar">
-               <img src="../assets/icon01.svg" alt="" class="circle">
-               <span class="title">Name of Player</span>
-               <a href="#!" class="secondary-content"><i class="material-icons">20pts</i></a>
-             </li>
-             <li class="collection-item avatar">
-               <img src="../assets/icon01.svg" alt="" class="circle">
-               <span class="title">Name of Player</span>
-               <a href="#!" class="secondary-content"><i class="material-icons">120pts</i></a>
-             </li>
-             <li class="collection-item avatar">
-               <img src="../assets/icon01.svg" alt="" class="circle">
-               <span class="title">Name of Player</span>
-               <a href="#!" class="secondary-content"><i class="material-icons">430pts</i></a>
-             </li>
+             <li class="collection-item avatar" ng-repeat="buddy in buddies">
+               <span class="title">{{buddy.first_name}} {{buddy.last_name}}</span>
+               <a href="#!" class="secondary-content">
+                 <br  />
+                 <br  />
+                 <i>{{buddy.count}}
+                   <ng-pluralize count="buddy.count"
+                when="{'one': 'batch',
+                    'other': 'batches'}">
+                  </ng-pluralize>
+                    in common</i>
+               </a>
+           </li>
            </ul>
         </section>
     </div>
