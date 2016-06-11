@@ -1,7 +1,7 @@
 app.controller('profile', function($scope, $http){
   console.log('profile controller loaded')
   var award = 'http://localhost:3000/awards';
-  var userID = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImRsaW5jaDMzQGdtYWlsLmNvbSIsImZpcnN0X25hbWUiOiJEZXJpayIsImxhc3RfbmFtZSI6IkxpbmNoIiwiYmlydGhkYXkiOiIxOTkxLTA0LTI2VDAwOjAwOjAwLjAwMFoifSwiaWF0IjoxNDY1NjI3MjM2LCJleHAiOjE0NjU3MTM2MzZ9.BBCT75E1VreQxo_ldlxIGL1zIu8l4yGIH4lv_287NGU";
+  var userID = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJlbWFpbCI6ImRsaW5jaDMzQGdtYWlsLmNvbSIsImZpcnN0X25hbWUiOiJFbGFuYSIsImxhc3RfbmFtZSI6IktvcGVsZXZpY2giLCJiaXJ0aGRheSI6IjE5ODAtMDQtMjZUMDA6MDA6MDAuMDAwWiJ9LCJpYXQiOjE0NjU2MzUzNTksImV4cCI6MTQ2NTcyMTc1OX0.GNUfx37-PipEv4m5oudPRxsj22F2WH6ogKMjjrKHWLs";
 
   $http.get(award, {
     headers: {

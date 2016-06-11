@@ -15,7 +15,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     .state('dashboard.profile', {
       url: '/profile',
-      templateUrl: 'partials/profile.html'
+      templateUrl: 'partials/profile.html',
+      controller: 'profile'
     })
     .state('dashboard.your-brew', {
       url: '/your-brew',
