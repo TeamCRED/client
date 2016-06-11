@@ -11,17 +11,27 @@ body {
   align-items: center;
 }
 
-.full-nav {
+.landing-nav {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   background-color: #444;
   color: #fff;
-  display: flex;
-  justify-content: flex-start;
 }
 
 .brand {
+  float: left;
   margin-left: 20px;
+  font-size: 1.4em;
+}
+
+.logos {
+  float: right;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  margin: 10px;
 }
 
 .check-your-brew-form {
