@@ -25,9 +25,10 @@
   </div>
 </header>
 <main class="row center-align" ng-show="employees">
-    <h3>Meet The Brewers</h3>
+    <h4>Meet The Brewers</h4>
     <div class="col s4" ng-repeat="employee in employees">
         <section>
+            <h3>{{employee.description}}</h3>
             <img class="circle responsive-img" ng-src="{{employee.image_url}}" alt=""/>
             <h4>{{employee.first_name}}
                 {{employee.last_name}}</h4>
