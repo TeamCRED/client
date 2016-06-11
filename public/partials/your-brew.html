@@ -51,7 +51,7 @@
         <section class="col s6" ng-if="loggedIn()">
           <ul class="collection with-header">
               <li class="collection-header"><h4>Batch Buddies</h4></li>
-             <li class="collection-item avatar" ng-repeat="buddy in buddies">
+             <li class="collection-item avatar" ng-repeat="buddy in buddies" ui-sref="dashboard.user({id: buddy.id})">
                <span class="title">{{buddy.first_name}} {{buddy.last_name}}</span>
                <a class="secondary-content">
                  <br  />

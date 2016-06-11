@@ -1,6 +1,6 @@
 <canvas ng-show="yay" id="canvas"></canvas>
 <div class="container">
-    <h1 ng-click="confetti()">{{user.first_name}}
+    <h1 ng-click="confetti()"><img ng-src="{{user.image_url}}" alt="buddy avatar" class="circle" style="height:80px;width:auto;"> {{user.first_name}}
         {{user.last_name}}</h1>
     <div class="row center-align" ng-show="loading">
         <div class="preloader-wrapper big active">
@@ -63,7 +63,7 @@
             <li class="collection-header">
                 <h4>Batch Buddies</h4>
             </li>
-            <li class="collection-item avatar" ng-repeat="buddy in buddies">
+            <li class="collection-item avatar" ng-repeat="buddy in buddies" ui-sref="dashboard.user({id: buddy.id})">
                 <img ng-src="{{buddy.image_url}}" alt="buddy avatar" class="circle buddy-icon">
                 <span class="title">{{buddy.first_name}} {{buddy.last_name}}</span>
                 <a class="secondary-content">
