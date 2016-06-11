@@ -1,4 +1,6 @@
 app.controller('MainController', function($scope, $http, $state){
+  $('.tooltipped').tooltip('remove');
+
   var server = 'http://localhost:3000/';
 
   $http.get(server + 'beers')

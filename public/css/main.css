@@ -9,6 +9,10 @@ body {
   background: url('/assets/circles.png') repeat;
 }
 
+.col {
+  padding: 0 !important;
+}
+
 /*LANDING*/
 
 .landingBackground {
@@ -46,6 +50,7 @@ nav.landingNav li a {
   color: #333;
 }
 
+<<<<<<< HEAD
 .landingForm img {
   width: 90%;
   height: auto;
@@ -60,8 +65,10 @@ nav.landingNav li a {
 }
 
 .input-field input[type=text]:focus,
+.input-field input[type=password]:focus,
+.input-field input[type=email]:focus,
 .input-field input[type=date]:focus {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #f44336;
   box-shadow: 0 1px 0 0 #000;
 }
 
@@ -88,6 +95,7 @@ a h1 {
 
 .left-nav .button a {
   width: 100%;
+  border-radius: 5px;
 }
 
 .left-nav img {

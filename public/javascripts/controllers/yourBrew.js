@@ -1,4 +1,5 @@
 app.controller('yourBrew', function($scope, $http, $stateParams){
+  $('.tooltipped').tooltip('remove');
   var server = 'http://localhost:3000/';
 
   let beer_id = $stateParams.beer_id || '';

@@ -12,35 +12,76 @@
     </div>
   </div>
   <div class="col s11">
-    <div class="row center-align" ng-show="loading">
-      <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-blue">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div><div class="gap-patch">
-            <div class="circle"></div>
-          </div><div class="circle-clipper right">
-            <div class="circle"></div>
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab text-red col s3"><a class="active" href="#login">Login</a></li>
+          <li class="tab text-red col s3"><a href="#signup"> Sign Up</a></li>
+        </ul>
+      </div>
+      <div id="login" class="col s12">
+        <div class="row center-align" ng-show="loading">
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="container row" ng-show="!loading">
+          <form class="col s12" ng-submit="login()">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" ng-model="email">
+                <label for="email">Email</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate" ng-model="password">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <button class="waves-effect waves-light btn-large red" type="submit">Login</button>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
-    <div class="container row" ng-show="!loading">
-      <form class="col s12" ng-submit="login()">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" ng-model="email">
-            <label for="email">Email</label>
+      <div id="signup" class="col s12">
+        <form class="col s12" ng-submit="signup()">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate" ng-model="user.email">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" ng-model="user.password">
+              <label for="password">Password</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="first_name" type="text" class="validate" ng-model="user.first_name">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="last_name" type="text" class="validate" ng-model="user.last_name">
+              <label for="last_name">Last Name</label>
+            </div>
+            <div class="input-field col s12">
+              <label for="birthday">Birthday</label>
+              <br />
+              <br />
+              <input id="birthday" type="date" class="validate" ng-model="user.birthday">
+            </div>
           </div>
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate" ng-model="password">
-            <label for="password">Password</label>
+          <div class="row">
+            <button class="waves-effect waves-light btn-large" type="submit">Signup</button>
           </div>
-        </div>
-        <div class="row">
-          <button class="waves-effect waves-light btn-large" type="submit">Login</button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 </div>
