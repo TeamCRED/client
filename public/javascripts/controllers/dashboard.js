@@ -1,9 +1,7 @@
 app.controller('dashboard', function($scope, $http, Auth){
   $('.tooltipped').tooltip('remove');
   $scope.user = Auth.getUser();
-  if(!$scope.user) {
-    Materialize.toast('Login to join the game', 4000);
-  }
+
   $('.tooltipped').tooltip({delay: 50});
 
   $scope.getBatch = function(){
@@ -13,6 +11,12 @@ app.controller('dashboard', function($scope, $http, Auth){
   $scope.loggedIn = function() {
     var user = Auth.getUser();
     return user ? user.email : null;
+  }
+
+  $scope.showGraphic = false;
+
+  $scope.toggleGraphic = function(){
+    $scope.showGraphic = ! $scope.showGraphic
   }
 
 });
