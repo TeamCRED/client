@@ -1,16 +1,19 @@
-<div layout="row" layout-xs="column">
-  <div flex class="green box">Row 1: Item 1</div>
-  <div flex="20" class="blue box">Row 1: Item 2</div>
-</div>
-<div layout="column" layout-xs="column">
-  <div flex="33" class="green box">Column 1: item 1</div>
-  <div flex="66" class="blue box">Column 1: item 2</div>
-</div>
+<md-content class="md-padding full-nav">
+  <md-nav-bar>
+    <md-nav-item md-nav-click="goto('page1')" name="page1" class="brand">Know Your Brew</md-nav-item>
+  </md-nav-bar>
+</md-content>
 
-<form name="check-your-brew-form">
+<h1>Check Your Brew</h1>
+<form name="check-your-brew-form" class="check-your-brew-form" layout="column">
+  <md-input-container>
+    <md-select ng-model="someModel" placeholder="Select a beer">
+      <md-option ng-value="beer" ng-repeat="beer in beers">{{ beer }}</md-option>
+    </md-select>
+  </md-input-container>
   <md-input-container>
     <label for="quote">Quote</label>
-    <input name="quote" ng-model="quote" required md-maxlength="50" minlength="50">
+    <input name="quote" ng-model="quote" md-maxlength="50" minlength="50">
     <div ng-messages="check-your-brew-form.quote.$error" ng-show="check-your-brew-form.quote.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -19,27 +22,23 @@
   </md-input-container>
   <md-input-container>
     <label>Date</label>
-    <textarea name="date" ng-model="date" required></textarea>
+    <input type=date name="date" ng-model="date" required></input>
     <div ng-messages="check-your-brew-form.date.$error" ng-show="check-your-brew-form.date.$dirty">
       <div ng-message="required">This is required!</div>
     </div>
   </md-input-container>
   <md-input-container>
     <label for="time-of-day">Time of Day</label>
-    <input name="time-of-day" ng-model="time-of-day" required md-maxlength="50" minlength="50">
+    <input name="time-of-day" ng-model="timeOfDay" required>
     <div ng-messages="check-your-brew-form.time-of-day.$error" ng-show="check-your-brew-form.time-of-day.$dirty">
       <div ng-message="required">This is required!</div>
-      <div ng-message="md-maxlength">That's too long!</div>
-      <div ng-message="minlength">That's too short!</div>
     </div>
   </md-input-container>
   <md-input-container>
-    <label for="tank">Quote</label>
-    <input name="tank" ng-model="tank" required md-maxlength="50" minlength="50">
+    <label for="tank">Tank</label>
+    <input name="tank" ng-model="tank" required>
     <div ng-messages="check-your-brew-form.tank.$error" ng-show="check-your-brew-form.tank.$dirty">
       <div ng-message="required">This is required!</div>
-      <div ng-message="md-maxlength">That's too long!</div>
-      <div ng-message="minlength">That's too short!</div>
     </div>
   </md-input-container>
 </form>

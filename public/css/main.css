@@ -1,16 +1,27 @@
-/*body {
-  background: url('/assets/avery-summer-day.jpg') no-repeat center center fixed;
-  https://d1h6bqmdexfe1t.cloudfront.net/uploads/header_image/image/11/mobile_1454200976_Featured-Beer-Header.jpg
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}*/
+@font-face {
+  font-family: 'AdobeGaramondPro';
+  src: url('/assets/AdobeGaramondProRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 
-.container-main {
+body {
+  background: url('/assets/circles.png') repeat;
+  font-family: 'AdobeGaramondPro', serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+.full-nav {
+  width: 100%;
+  padding: 20px;
+  background-color: #444;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.brand {
+  margin-left: 20px;
 }
 
 .check-your-brew-form {
@@ -18,10 +29,6 @@
   max-width: 200px;
 }
 
-label {
-  margin-top: 20px;
-}
-
-.btn-custom {
+label, .btn-custom {
   margin-top: 20px;
 }
