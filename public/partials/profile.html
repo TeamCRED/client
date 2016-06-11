@@ -27,7 +27,7 @@
             </li>
             <li class="collection-item avatar" ng-repeat="batch in batches">
                 <img src="../assets/icon01.svg" alt="" class="circle">
-                <span class="title">{{ batch.beer.name }} - {{batch.quote}}</span>
+                <span class="title" on-click="batchRedirect()">{{ batch.beer.name }} - {{batch.quote}}</span>
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />

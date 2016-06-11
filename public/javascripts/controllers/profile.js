@@ -1,9 +1,11 @@
-app.controller('profile', function($scope, $http, $state, Auth) {
+app.controller('profile', function($scope, $http, $state, Auth, $location) {
   $('.tooltipped').tooltip('remove');
   var award = 'http://localhost:3000/awards';
   var server = 'http://localhost:3000/';
   $scope.user = Auth.getUser();
-
+  $scope.batchRedirect = function () {
+    $location.path('/dashboard/your-brew?beer_id=white-rascal&tank=B4')
+  }
   if(!$scope.user) {
     $state.go('login');
   } else {

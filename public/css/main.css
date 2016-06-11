@@ -9,8 +9,8 @@ body {
   background: url('/assets/circles.png') repeat;
 }
 
-.col {
-  padding: 0 !important;
+body .row .col {
+  padding: 0;
 }
 
 /*LANDING*/
@@ -85,14 +85,13 @@ a h1 {
   width: 100%;
   text-align: center;
   vertical-align: middle;
-  margin-top: 15px;
-  margin-bottom: 5px;
   border-bottom: solid 1px #333;
 }
 
 .left-nav .button a {
   width: 100%;
-  border-radius: 5px;
+  height: 100%;
+  padding: 10px;
 }
 
 .left-nav img {
@@ -128,5 +127,5 @@ section .circle {
 }
 
 main .more-info section.col {
-  padding: 50px;
+  padding-right: 5%;
 }
