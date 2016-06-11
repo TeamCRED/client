@@ -15,7 +15,6 @@ app.controller('MainController', function($scope, $http, $state, Auth){
   $http.get(server + 'beers')
     .then(function(result){
       $scope.beers = result.data;
-      console.log($scope.beers);
     })
 
 

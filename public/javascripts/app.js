@@ -18,6 +18,11 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'partials/profile.html',
       controller: 'profile'
     })
+    .state('dashboard.user', {
+      url: '/user/:id',
+      templateUrl: 'partials/profile.html',
+      controller: 'user'
+    })
     .state('dashboard.your-brew', {
       url: '/your-brew?beer_id&quote&date&time&tank',
       templateUrl: 'partials/your-brew.html',
