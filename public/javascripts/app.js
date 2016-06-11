@@ -1,17 +1,17 @@
 var app = angular.module('knowYourBrewApp', ['ui.router', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider){
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/dashboard/landing');
   $stateProvider
-    .state('landing', {
-      url: '/',
-      templateUrl: 'partials/landing.html',
-      controller: 'MainController'
-    })
     .state('dashboard', {
       url: '/dashboard',
       templateUrl: 'partials/dashboard.html',
       controller: 'dashboard'
+    })
+    .state('dashboard.landing', {
+      url: '/landing',
+      templateUrl: 'partials/landing.html',
+      controller: 'MainController'
     })
     .state('dashboard.profile', {
       url: '/profile',
@@ -28,17 +28,22 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'partials/your-brew.html',
       controller: 'yourBrew'
     })
-    .state('redeem', {
+    .state('dashboard.redeem', {
       url: '/redeem',
       templateUrl: 'partials/redeem.html',
       controller: 'redeem'
     })
-    .state('login', {
+    .state('dashboard.addBeer', {
+      url: '/addBeer',
+      templateUrl: 'partials/addBeer.html',
+      controller: 'addBeer'
+    })
+    .state('dashboard.login', {
       url: '/login',
       templateUrl: 'partials/login.html',
       controller: 'login'
     })
-    .state('signup', {
+    .state('dashboard.signup', {
       url: '/signup',
       templateUrl: 'partials/signup.html',
       controller: 'signup'

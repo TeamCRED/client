@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col s1 left-nav">
+  <div class="col s1 left-nav" ng-if="loggedIn()">
     <div class="row button">
       <a class="waves-effect waves-red tooltipped" ui-sref="dashboard.profile" data-position="right" data-delay="50" data-tooltip="Profile">
         <img src="../assets/icon05.svg" alt="profile" />
@@ -11,15 +11,17 @@
       </a>
     </div>
     <div class="row button">
-      <a class="waves-effect waves-red tooltipped" ui-sref="redeem" data-position="right" data-delay="50" data-tooltip="Beer">
+      <a class="waves-effect waves-red tooltipped" ui-sref="dashboard.redeem" data-position="right" data-delay="50" data-tooltip="Beer">
         <i class="medium material-icons">store</i>
       </a>
     </div>
     <div class="row bottom-button button">
-      <a class="waves-effect waves-red tooltipped" ui-sref="redeem" data-position="right" data-delay="50" data-tooltip="Beer">
+      <a class="waves-effect waves-red tooltipped" ui-sref="dashboard.addBeer" data-position="right" data-delay="50" data-tooltip="Beer">
         <i class="medium material-icons">add</i>
       </a>
     </div>
   </div>
-  <div class="col s11 mainDashboard" ui-view></div>
+  <div class="col mainDashboard" ng-class="{s11: loggedIn(), s12: !loggedIn()}">
+    <div ui-view></div>
+  </div>
 </div>
