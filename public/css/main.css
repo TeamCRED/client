@@ -1,14 +1,11 @@
 @font-face {
   font-family: 'AdobeGaramondPro';
-  src: url('/assets/AdobeGaramondProRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('/assets/AdobeGaramondProRegular.ttf')  format('truetype');
 }
 
 body {
   background: url('/assets/circles.png') repeat;
   font-family: 'AdobeGaramondPro', serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .landing-nav {
@@ -41,4 +38,52 @@ body {
 
 label, .btn-custom {
   margin-top: 20px;
+}
+
+/*SIDE NAV BAR*/
+
+body .row {
+  margin-bottom: 0;
+}
+
+.row .col {
+  padding: 0;
+}
+
+.side {
+  height: 100vh;
+  background: rebeccapurple;
+  width: 100%;
+}
+
+.side li {
+  height: 5%;
+  width: 100%;
+  border-bottom: solid 1px black;
+  background: green;
+}
+
+.side li a {
+  width: 100%;
+}
+
+section.dashboard {
+  height: 100vh;
+  overflow: scroll;
+}
+
+section header {
+
+}
+
+.dashboard main {
+
+}
+
+main section img {
+  padding: 20px;
+}
+
+main section h4 {
+  margin: 0;
 }
