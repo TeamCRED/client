@@ -1,5 +1,5 @@
-app.factory('Auth', function($http){
-  let server = 'http://localhost:3000/auth/'
+app.factory('Auth', function($http, utils){
+  let server = utils.server + 'auth/'
 
   function getUser() {
     if(localStorage.token) {

@@ -1,4 +1,4 @@
-app.controller('profile', function($scope, $http, $state, Auth, $location, $timeout) {
+app.controller('profile', function($scope, $http, $state, Auth, $location, $timeout, utils) {
     $scope.confetti = function(index) {
       if ($scope.questCompleted && index == 1) {
         $scope.yay = true;
@@ -19,8 +19,8 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
       },500)
     }
     $scope.yay = false;
-    var award = 'http://localhost:3000/awards';
-    var server = 'http://localhost:3000/';
+    var server = utils.server;
+    var award = utils.server + 'awards';
     $scope.user = Auth.getUser();
     $scope.batchRedirect = function() {
         $location.path('/dashboard/your-brew?beer_id=white-rascal&tank=B4')

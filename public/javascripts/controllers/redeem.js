@@ -1,5 +1,5 @@
-app.controller('redeem', function($scope, Auth, $state, $http){
-  var server = 'http://localhost:3000/';
+app.controller('redeem', function($scope, Auth, $state, $http, utils){
+  var server = utils.server;
   $('.collapsible').collapsible();
   $('.tooltipped').tooltip('remove');
   $('ul.tabs').tabs();

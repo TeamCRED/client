@@ -1,8 +1,8 @@
-app.controller('yourBrew', function($scope, $http, $stateParams, Auth, $location, $state) {
+app.controller('yourBrew', function($scope, $http, $stateParams, Auth, $location, $state, utils) {
   $('.tooltipped').tooltip('remove');
   $('.tooltipped').tooltip({delay: 50});
 
-  var server = 'http://localhost:3000/';
+  var server = utils.server;
   var redirect = JSON.parse(localStorage.getItem('redirect'));
   if (redirect) {
       $state.go('dashboard.profile')

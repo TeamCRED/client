@@ -1,4 +1,4 @@
-app.controller('MainController', function($scope, $http, $state, Auth){
+app.controller('MainController', function($scope, $http, $state, Auth, utils){
   $('.tooltipped').tooltip('remove');
   $('.tooltipped').tooltip({delay: 50});
 
@@ -11,7 +11,7 @@ app.controller('MainController', function($scope, $http, $state, Auth){
     return localStorage.getItem('batchData')
   }
 
-  var server = 'http://localhost:3000/';
+  var server = utils.server;
 
   $http.get(server + 'beers')
     .then(function(result){

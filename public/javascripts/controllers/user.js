@@ -1,6 +1,6 @@
-app.controller('user', function($scope, $http, $state, Auth, $location, $timeout, $stateParams) {
-  var award = 'http://localhost:3000/awards';
-  var server = 'http://localhost:3000/';
+app.controller('user', function($scope, $http, $state, Auth, $location, $timeout, $stateParams, utils) {
+  var server = utils.server;
+  var award = server + 'awards';
   $scope.user = Auth.getUser();
   $('.tooltipped').tooltip('remove');
   $('.tooltipped').tooltip({delay: 50});
