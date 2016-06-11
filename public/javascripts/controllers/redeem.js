@@ -5,6 +5,7 @@ app.controller('redeem', function($scope, Auth, $state, $http, utils){
   $('ul.tabs').tabs();
   $scope.user = Auth.getUser();
   $('.tooltipped').tooltip({delay: 50});
+  $('.materialboxed').materialbox();
 
   $http.get(server + 'points/' + $scope.user.id)
       .then(function(result) {
