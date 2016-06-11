@@ -1,3 +1,27 @@
-body {
-  background-color: grey;
+/*body {
+  background: url('/assets/avery-summer-day.jpg') no-repeat center center fixed;
+  https://d1h6bqmdexfe1t.cloudfront.net/uploads/header_image/image/11/mobile_1454200976_Featured-Beer-Header.jpg
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.check-your-brew-form {
+  width: 80%;
+  max-width: 200px;
+}
+
+label {
+  margin-top: 20px;
+}
+
+.btn-custom {
+  margin-top: 20px;
 }
