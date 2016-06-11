@@ -17,11 +17,6 @@ body {
   height: 100vh;
 }
 
-.brand-logo {
-  margin-left: 20px;
-  font-size: 1.4em;
-}
-
 .logo {
   height: 50px;
   padding-top: 10px;
@@ -31,6 +26,7 @@ body {
 nav.landingNav {
   background: none;
   box-shadow: none;
+  margin-bottom: 40px;
 }
 
 nav.landingNav a.logo {
@@ -48,6 +44,15 @@ nav.landingNav li a {
 
 .landingForm select {
   color: #333;
+}
+
+.landingForm img {
+  width: 90%;
+  height: auto;
+}
+
+.landingForm button {
+  margin-top: 20px;
 }
 
 .input-field input[type=text]:focus + label {
