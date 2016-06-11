@@ -1,4 +1,17 @@
-<div class="landingBackground">
+<div class="row">
+  <div class="col s1 left-nav"  ng-if="loggedIn()">
+    <div class="row button">
+      <a class="waves-effect waves-red tooltipped" ui-sref="dashboard.profile" data-position="right" data-delay="50" data-tooltip="Profile">
+        <img src="../assets/icon05.svg" alt="profile" />
+      </a>
+    </div>
+    <div class="row button">
+      <a class="waves-effect waves-red tooltipped" ui-sref="landing" data-position="right" data-delay="50" data-tooltip="Beer">
+        <img src="../assets/icon07.svg" alt="profile" />
+      </a>
+    </div>
+  </div>
+<div class="landingBackground col" ng-class="{s11: loggedIn(), s12: !loggedIn()}">
   <nav class="landingNav" ng-controller="nav">
     <a ui-sref="landing" class="brand-logo center">
       <h1 class="center-align">Know Your Brew</h1>
@@ -64,4 +77,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

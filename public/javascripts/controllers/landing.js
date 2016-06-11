@@ -1,5 +1,10 @@
-app.controller('MainController', function($scope, $http, $state){
+app.controller('MainController', function($scope, $http, $state, Auth){
   $('.tooltipped').tooltip('remove');
+
+  $scope.loggedIn = function() {
+    var user = Auth.getUser();
+    return user ? user.email : null;
+  }
 
   var server = 'http://localhost:3000/';
 

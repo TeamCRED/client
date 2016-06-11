@@ -25,15 +25,17 @@
   </div>
 </header>
 <main class="row center-align" ng-show="employees">
-    <h4>Meet The Brewers</h4>
-    <div class="col s4" ng-repeat="employee in employees">
-        <section>
-            <h3>{{employee.description}}</h3>
-            <img class="circle responsive-img" ng-src="{{employee.image_url}}" alt=""/>
-            <h4>{{employee.first_name}}
-                {{employee.last_name}}</h4>
-            <h5>{{employee.name}}</h5>
-        </section>
+    <div class="row">
+      <h3>Meet The Crew</h3>
+      <div class="col s4" ng-repeat="employee in employees">
+          <section>
+              <h4>{{employee.description}}</h4>
+              <img class="circle responsive-img" ng-src="{{employee.image_url}}" alt=""/>
+              <h4>{{employee.first_name}}
+                  {{employee.last_name}}</h4>
+              <h5>{{employee.name}}</h5>
+          </section>
+      </div>
     </div>
     <div class="more-info row">
         <section class="col s6">
@@ -43,7 +45,7 @@
         </section>
         <section class="col s6">
           <ul class="collection with-header">
-              <li class="collection-header"><h4>Drinking Buddies</h4></li>
+              <li class="collection-header"><h4>Batch Buddies</h4></li>
              <li class="collection-item avatar">
                <img src="../assets/icon01.svg" alt="" class="circle">
                <span class="title">Name of Player</span>
