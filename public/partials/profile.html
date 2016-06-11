@@ -41,7 +41,7 @@
                 <h4>Badges</h4>
             </li>
             <li class="collection-item avatar" ng-repeat="award in awards">
-                <img src="../assets/icon01.svg" alt="" class="circle">
+                <img src="{{award.image_url}}" alt="award icon" class="circle award-icon">
                 <span class="title">{{award.name}}</span>
                 <a class="secondary-content">
                     <i class="material-icons">{{award.points}}pts</i>
