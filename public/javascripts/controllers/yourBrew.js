@@ -32,7 +32,6 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth){
     let time = $stateParams.time || '';
     let tank = $stateParams.tank || '';
 
-    console.log($stateParams);
     $scope.loading = true;
 
 
@@ -51,6 +50,6 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth){
           $scope.message = "Brew not found! :(";
         }
         $scope.loading = false;
-      }).then(function(){
-
+      })
+    }
 });
