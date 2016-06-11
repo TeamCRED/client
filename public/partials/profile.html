@@ -72,7 +72,12 @@
                 <a href="#!" class="secondary-content">
                   <br  />
                   <br  />
-                  <i class="material-icons">Stuff</i>
+                  <i class="material-icons">{{buddy.count}}
+                    <ng-pluralize count="buddy.count"
+                 when="{'one': 'batch',
+                     'other': 'batches'}">
+                   </ng-pluralize>
+                     in common</i>
                 </a>
             </li>
         </ul>
