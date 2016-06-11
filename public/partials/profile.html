@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>{{user.first_name}} {{user.last_name}}</h1>
+  <hr>
+  <h1>Awards</h1>
+  <div class="row">
+    <div class="col s6">
+      <h2><em>Award</em></h2>
+    </div>
+    <div class="col s6">
+      <h3><em>Points</em></h3>
+    </div>
+  </div>
+  <div class="row" ng-repeat="award in awards">
+    <div class="col s6">
+      <h2>{{award.name}}</h2>
+    </div>
+    <div class="col s6">
+      <h3>{{award.points}}</h3>
+    </div>
+  </div>
+</div>

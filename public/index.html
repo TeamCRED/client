@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="css/main.css"charset="utf-8">
   </head>
   <body >
+    <header class="landing-nav" ng-controller="nav">
+      <h1 class="brand" ui-sref="landing">Know Your Brew</h1>
+      <section class="logos valign-wrapper">
+        <a ng-if="!loggedIn()" class="waves-effect waves-light btn valign" ui-sref="login">Login</a>
+        <a ng-if="loggedIn()" class="waves-effect waves-light btn valign" ui-sref="dashboard.profile">Profile</a>
+        <a href="http://www.averybrewing.com/" target="_blank"><img class="logo" src="/assets/avery-logo.png" alt="Avery Brewing" /></a>
+        <a href="http://www.mondorobot.com/" target="_blank"><img class="logo" src="/assets/mondo-robot-logo.png" alt="Avery Brewing" /></a>
+      </section>
+    </header>
     <div ui-view></div>
     <script src="lib/angular.js"></script>
     <script src="lib/angular-animate.js"></script>
@@ -16,7 +25,10 @@
     <script src="lib/materialize.js"></script>
     <script type="text/javascript" src="lib/angular-ui-router.js"></script>
     <script type="text/javascript" src="javascripts/app.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/nav.js"></script>
     <script type="text/javascript" src="javascripts/controllers/landing.js"></script>
+    <script type="text/javascript" src="javascripts/services/Auth.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/login.js"></script>
     <script type="text/javascript" src="javascripts/controllers/yourBrew.js"></script>
     <script type="text/javascript" src="javascripts/controllers/dashboard.js"></script>
     <script type="text/javascript" src="javascripts/controllers/profile.js"></script>

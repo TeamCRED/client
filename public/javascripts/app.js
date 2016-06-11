@@ -24,6 +24,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     .state('login', {
       url: '/login',
-      templateUrl: 'partials/login.html'
+      templateUrl: 'partials/login.html',
+      controller: 'login'
     });
   });
