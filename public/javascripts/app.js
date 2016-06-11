@@ -14,12 +14,12 @@ app.config(function($stateProvider, $urlRouterProvider){
       controller: 'dashboard'
     })
     .state('dashboard.profile', {
-      url: '/dashboard/profile',
+      url: '/profile',
       templateUrl: 'partials/profile.html'
     })
     .state('dashboard.your-brew', {
-      url: '/dashboard/your-brew',
-      templateUrl: 'partials/profile.html'
+      url: '/your-brew',
+      templateUrl: 'partials/your-brew.html'
     })
     .state('login', {
       url: '/login',
