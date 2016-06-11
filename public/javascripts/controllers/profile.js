@@ -1,4 +1,5 @@
 app.controller('profile', function($scope, $http, $state, Auth) {
+  $('.tooltipped').tooltip('remove');
   var award = 'http://localhost:3000/awards';
 
   $scope.user = Auth.getUser();
