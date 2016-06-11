@@ -1,19 +1,29 @@
 app.controller('MainController', function($scope, $http){
-  var server = 'https://know-your-can.herokuapp.com/';
+  var server = 'http://localhost:3000/';
 
-  $scope.beers = ["India Pale Ale","White Rascal", "Joe's"];
+  $http.get(server + 'beers')
+    .then(function(result){
+      $scope.beers = result.data;
+    })
+
+
   $scope.brew = {};
 
   $scope.submit = function(){
+    let quote = $scope.brew.quote || '';
+    let date = $scope.brew.date || '';
+    let time = $scope.brew.time || '';
+    let tank = $scope.brew.tank || '';
+
     $http.get(
-      server + $scope.brew.beer_id
-      + '?quote=' + $scope.brew.quote
-      + '&date=' + $scope.brew.date
-      + '&time=' + $scope.brew.time
-      + '&tank=' + $scope.brew.tank)
-      .then(function (result) {
-        console.log(result);
+      server + 'batch?beer_id=' + $scope.brew.beer_id
+      + '&quote=' + quote
+      + '&date=' + date
+      + '&time=' + time
+      + '&tank=' + tank)
+      .then(function(result) {
         $scope.data = result.data
+        console.log(result);
       })
   }
 });
