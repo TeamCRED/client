@@ -6,6 +6,10 @@ app.controller('MainController', function($scope, $http, $state, Auth){
     return user ? user.email : null;
   }
 
+  $scope.getBatch = function(){
+    return localStorage.getItem('batchData')
+  }
+
   var server = 'http://localhost:3000/';
 
   $http.get(server + 'beers')
