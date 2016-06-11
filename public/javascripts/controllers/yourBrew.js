@@ -1,11 +1,14 @@
-app.controller('yourBrew', function($scope, $http, $stateParams, Auth){
+app.controller('yourBrew', function($scope, $http, $stateParams, Auth, $location, $state){
   $('.tooltipped').tooltip('remove');
   var server = 'http://localhost:3000/';
+  var redirect = localStorage.getItem('redirect');
+  if (redirect) {
+    $state.go('dashboard.profile')
+  }
   if (Auth.getUser()) {
     $http.get(server + 'buddies/' + Auth.getUser().id)
     .then(function (result) {
       $scope.buddies = result.data;
-      console.log(result.data);
     });
   }
   if($stateParams.batch_id) {

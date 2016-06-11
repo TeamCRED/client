@@ -15,13 +15,17 @@ app.controller('MainController', function($scope, $http, $state, Auth){
   $http.get(server + 'beers')
     .then(function(result){
       $scope.beers = result.data;
-      console.log($scope.beers);
     })
 
 
   $scope.brew = {};
 
   $scope.submit = function(){
+    var questCompleted = localStorage.getItem('quest')
+    if ($scope.brew.beer_id == "ipa" && !questCompleted) {
+      localStorage.setItem('quest', 'true');
+      localStorage.setItem('redirect', 'true')
+    }
     let quote = $scope.brew.quote || '';
     let date = $scope.brew.date || '';
     let time = $scope.brew.time || '';

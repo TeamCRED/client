@@ -1,5 +1,22 @@
 app.controller('profile', function($scope, $http, $state, Auth, $location, $timeout) {
+    $scope.confetti = function(index) {
+      if ($scope.questCompleted && index == 1) {
+        $scope.yay = true;
+        confetti();
+        $timeout(function() {
+            $scope.yay = false;
+        }, 4500)
+      }
+    }
     $('.tooltipped').tooltip('remove');
+    $scope.questCompleted = JSON.parse(localStorage.getItem('quest'));
+    var redirect = JSON.parse(localStorage.getItem('redirect'));
+    if ($scope.questCompleted && redirect) {
+      localStorage.setItem('redirect', 'false');
+      $timeout(function () {
+        $scope.confetti(1);
+      },500)
+    }
     $scope.yay = false;
     var award = 'http://localhost:3000/awards';
     var server = 'http://localhost:3000/';
@@ -19,6 +36,9 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
             })
             .then(function(result) {
                 $scope.awards = result.data;
+                if ($scope.questCompleted && $scope.awards.length == 4) {
+                  $scope.awards.unshift({awesome: true})
+                }
                 $scope.loading = false;
             });
 
@@ -35,20 +55,11 @@ app.controller('profile', function($scope, $http, $state, Auth, $location, $time
         $http.get(server + 'employees/' + $scope.user.id)
             .then(function(result) {
                 $scope.employees = result.data;
-                console.log(result.data);
             });
-    }
-    $scope.confetti = function() {
-        $scope.yay = true;
-        confetti();
-        $timeout(function() {
-            $scope.yay = false;
-        }, 4500)
     }
     $http.get(server + 'buddies/' + $scope.user.id)
     .then(function (result) {
       $scope.buddies = result.data;
-      console.log(result.data);
     });
 });
 
