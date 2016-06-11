@@ -1,6 +1,5 @@
 app.controller('profile', function($scope, $http, $state, Auth, $location) {
   $('.tooltipped').tooltip('remove');
-  var award = 'http://localhost:3000/awards';
   var server = 'http://localhost:3000/';
   $scope.user = Auth.getUser();
   $scope.batchRedirect = function () {
@@ -34,8 +33,12 @@ app.controller('profile', function($scope, $http, $state, Auth, $location) {
     $http.get(server + 'employees/' + $scope.user.id)
     .then(function (result) {
       $scope.employees = result.data;
-      console.log(result.data);
     });
   }
 
+  $http.get(server + 'buddies/' + $scope.user.id)
+  .then(function (result) {
+    $scope.buddies = result.data;
+    console.log(result.data);
+  });
 });
