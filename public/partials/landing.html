@@ -1,51 +1,69 @@
-<div class="container">
-  <h1 class="center-align">Know Your Brew</h1>
-  <div class="row">
-    <form class="col s12" ng-submit="submit()">
-      <div class="row">
-        <div class="input-field col s12">
-          <label>Beer</label>
-          <br>
-          <br>
-          <select ng-model="brew.beer_id" class="browser-default">
-            <option value="" disabled selected>Select a Beer</option>
-            <option value="{{ beer.id }}" ng-repeat="beer in beers">{{ beer.name }}</option>
-          </select>
+<div class="landingBackground">
+  <nav class="landingNav" ng-controller="nav">
+    <a ui-sref="landing" class="brand-logo center">
+      <h1 class="center-align">Know Your Brew</h1>
+    </a>
+    <ul id="nav-mobile" class="left">
+      <li><a class="logo" href="http://www.averybrewing.com/" target="_blank"><img class="logo" src="/assets/avery-logo.png" alt="Avery Brewing" /></a></li>
+      <li><a class="logo" href="http://www.mondorobot.com/" target="_blank"><img class="logo" src="/assets/mondo-robot-logo.png" alt="Avery Brewing" /></a></li>
+    </ul>
+    <ul id="nav-mobile" class="right">
+      <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text " ui-sref="signup">Signup</a></li>
+      <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text" ui-sref="login">Login</a></li>
+      <li><a ng-if="loggedIn()" class="waves-effect waves-light black-text " ui-sref="dashboard.profile">Profile</a></li>
+      <li><a ng-if="loggedIn()" class="waves-effect waves-light black-text " ng-click="logOut()">Log Out</a></li>
+    </ul>
+  </nav>
+  <div class="container landingForm">
+    <br>
+    <br>
+    <div class="row">
+      <form class="col s12" ng-submit="submit()">
+        <div class="row">
+          <div class="input-field col s12">
+            <label>Beer</label>
+            <br>
+            <br>
+            <select ng-model="brew.beer_id" class="browser-default" required>
+              <option value="" disabled selected>Select a Beer</option>
+              <option value="{{ beer.id }}" ng-repeat="beer in beers">{{ beer.name }}</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="quote" type="text" class="validate" ng-model="brew.quote">
-          <label for="quote">Quote</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="quote" type="text" class="validate" ng-model="brew.quote">
+            <label for="quote">Quote</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <label for="date">Date</label>
-          <br>
-          <br>
-          <input id="date" type="date" class="validate" ng-model="brew.date">
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="date">Date</label>
+            <br>
+            <br>
+            <input id="date" type="date" class="validate" ng-model="brew.date">
+          </div>
+          <div class="input-field col s6">
+            <label for="time">Time</label>
+            <br>
+            <br>
+            <input id="time" type="text" class="validate" ng-model="brew.time">
+          </div>
         </div>
-        <div class="input-field col s6">
-          <label for="time">Time</label>
-          <br>
-          <br>
-          <input id="time" type="text" class="validate" ng-model="brew.time">
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="tank">Tank</label>
+            <br>
+            <br>
+            <input id="tank" type="text" class="validate" ng-model="brew.tank">
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <label for="tank">Tank</label>
-          <br>
-          <br>
-          <input id="tank" type="text" class="validate" ng-model="brew.tank">
+        <div class="row">
+          <div class="center-align">
+            <button class="btn waves-effect waves-light" type="submit">Know Your Brew</button>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="center-align">
-          <button class="btn waves-effect waves-light" type="submit">Know Your Brew</button>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>

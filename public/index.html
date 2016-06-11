@@ -9,19 +9,6 @@
     <link rel="stylesheet" href="css/main.css"charset="utf-8">
   </head>
   <body >
-    <nav ng-controller="nav">
-      <div class="nav-wrapper grey darken-2">
-        <a class="brand-logo" ui-sref="landing">Know Your Brew</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a ng-if="!loggedIn()" class="waves-effect waves-light btn valign red" ui-sref="signup">Signup</a></li>
-          <li><a ng-if="!loggedIn()" class="waves-effect waves-light btn valign" ui-sref="login">Login</a></li>
-          <li><a ng-if="loggedIn()" class="waves-effect waves-light btn valign green" ui-sref="dashboard.profile">Profile</a></li>
-          <li><a ng-if="loggedIn()" class="waves-effect waves-light btn valign blue" ng-click="logOut()">Log Out</a></li>
-          <li><a href="http://www.averybrewing.com/" target="_blank"><img class="logo" src="/assets/avery-logo.png" alt="Avery Brewing" /></a></li>
-          <li><a href="http://www.mondorobot.com/" target="_blank"><img class="logo" src="/assets/mondo-robot-logo.png" alt="Avery Brewing" /></a></li>
-        </ul>
-      </div>
-    </nav>
     <div ui-view></div>
     <script src="lib/angular.js"></script>
     <script src="lib/angular-animate.js"></script>
