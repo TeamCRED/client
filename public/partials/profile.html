@@ -25,7 +25,7 @@
             <li class="collection-item avatar" ng-repeat="batch in batches" ui-sref="dashboard.batch({batch_id: batch.id})">
                 <img src="../assets/icon01.svg" alt="" class="circle">
                 <span class="title" on-click="batchRedirect()">{{ batch.beer.name }} - {{batch.quote}}</span>
-                <a href="#!" class="secondary-content">
+                <a class="secondary-content">
                   <br  />
                   <br  />
                   <i>{{batch.date | date}} {{batch.time}}</i>
@@ -51,7 +51,7 @@
             <li class="collection-item avatar" ng-repeat="employee in employees">
                 <img ng-src="{{employee.image_url}}" alt="" class="circle">
                 <span class="title"><em>{{employee.description}}</em> - {{ employee.first_name }} {{employee.last_name}}</span>
-                <a href="#!" class="secondary-content">
+                <a class="secondary-content">
                   <br  />
                   <br  />
                   <i>{{employee.name}} <span ng-if="employee.count > 1"> - {{employee.count}} batches</span></i>
@@ -65,7 +65,7 @@
             </li>
             <li class="collection-item avatar" ng-repeat="buddy in buddies">
                 <span class="title">{{buddy.first_name}} {{buddy.last_name}}</span>
-                <a href="#!" class="secondary-content">
+                <a class="secondary-content">
                   <br  />
                   <br  />
                   <i>{{buddy.count}}
