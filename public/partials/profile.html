@@ -37,7 +37,7 @@
                 <h4>Badges</h4>
             </li>
             <li class="collection-item avatar" ng-repeat="award in awards">
-                <img src="{{award.image_url}}" alt="award icon" class="circle award-icon">
+                <img ng-src="{{award.image_url}}" alt="award icon" class="circle award-icon">
                 <span class="title">{{award.name}}</span>
                 <a class="secondary-content">
                     <i>{{award.points}}pts</i>
@@ -64,6 +64,7 @@
                 <h4>Batch Buddies</h4>
             </li>
             <li class="collection-item avatar" ng-repeat="buddy in buddies" ui-sref="dashboard.user({id: buddy.id})">
+                <img ng-src="{{buddy.image_url}}" alt="buddy avatar" class="circle buddy-icon">
                 <span class="title">{{buddy.first_name}} {{buddy.last_name}}</span>
                 <a class="secondary-content">
                   <br  />
