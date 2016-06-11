@@ -9,7 +9,8 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider){
     })
     .state('dashboard', {
       url: '/dashboard',
-      templateUrl: 'partials/dashboard.html'
+      templateUrl: 'partials/dashboard.html',
+      controller: 'dashboard'
     })
     .state('dashboard.profile', {
       url: '/dashboard/profile',
