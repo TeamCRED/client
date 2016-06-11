@@ -2,6 +2,7 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth) {
     $('.tooltipped').tooltip('remove');
     var server = 'http://localhost:3000/';
 
+
     if ($stateParams.batch_id) {
         if (Auth.getUser()) {
             $http.get(server + 'batch/' + $stateParams.batch_id + '/buddies/' + Auth.getUser().id)
@@ -32,9 +33,7 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth) {
         let date = $stateParams.date || '';
         let time = $stateParams.time || '';
         let tank = $stateParams.tank || '';
-
-        console.log($stateParams);
-        $scope.loading = true;
+    $scope.loading = true;
 
 
         $http.get(server + 'beer/' + beer_id)
@@ -55,5 +54,4 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth) {
             })
 
     }
-
 });
