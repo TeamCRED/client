@@ -9,7 +9,7 @@
       <li><a class="logo" href="http://www.mondorobot.com/" target="_blank"><img class="logo" src="/assets/mondo-robot-logo.png" alt="Avery Brewing" /></a></li>
     </ul>
     <ul id="nav-mobile" class="right">
-      <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text " ui-sref="dashboard.signup">Signup</a></li>
+      <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text " ui-sref="dashboard.login({signup: true})">Signup</a></li>
       <li><a ng-if="!loggedIn()" class="waves-effect waves-light black-text" ui-sref="dashboard.login">Login</a></li>
       <li><a ng-if="loggedIn()" class="waves-effect waves-light black-text " ui-sref="dashboard.profile">Profile</a></li>
       <li><a ng-if="loggedIn()" class="waves-effect waves-light black-text " ng-click="logOut()">Log Out</a></li>

@@ -1,3 +1,7 @@
+<div class="row center-align" ng-show="!batch">
+  <h1>Drink up!</h1>
+  <h1>You have not added a recent brew.</h1>
+</div>
 <div class="row center-align" ng-show="loading">
   <div class="preloader-wrapper big active">
     <div class="spinner-layer spinner-blue">
@@ -11,7 +15,7 @@
     </div>
   </div>
 </div>
-<header class="row dashboardBanner" ng-show="!loading">
+<header class="row dashboardBanner" ng-show="!loading && batch">
   <div class="col s6 center-align">
     <img style="height:300px;width:auto;" ng-src="{{beer.label_image.original}}">
   </div>
@@ -71,6 +75,6 @@
         </section>
     </div>
 </main>
-<main class="row center-align" ng-show="!loading && !employees">
+<main class="row center-align" ng-show="!loading && !employees && batch">
   <h1>No brew data found. :(</h1>
 </main>

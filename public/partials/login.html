@@ -5,7 +5,7 @@
       <li class="tab text-red col s3"><a href="#signup"> Sign Up</a></li>
     </ul>
   </div>
-  <div id="login" class="col s12">
+  <div class="col s12">
     <div class="row center-align" ng-show="loading">
       <div class="preloader-wrapper big active">
         <div class="spinner-layer spinner-blue">
@@ -19,6 +19,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div id="login" class="col s12">
     <div class="container row" ng-show="!loading">
       <form class="col s12" ng-submit="login()">
         <div class="row">
@@ -37,9 +39,13 @@
       </form>
     </div>
   </div>
-  <div id="signup" class="col s12">
+  <div id="signup" class="col s12" ng-show="!loading">
+    <div class="row center-align text-red" ng-show="error">
+      <h3>Error:</h3>
+      <h3>{{error}}</h3>
+    </div>
     <form class="col s12" ng-submit="signup()">
-      <div class="row">
+      <div class="container row">
         <div class="input-field col s12">
           <input id="email" type="email" class="validate" ng-model="user.email">
           <label for="email">Email</label>
@@ -62,9 +68,9 @@
           <br />
           <input id="birthday" type="date" class="validate" ng-model="user.birthday">
         </div>
-      </div>
-      <div class="row">
-        <button class="waves-effect waves-light btn-large" type="submit">Signup</button>
+        <div class="row">
+          <button class="waves-effect waves-light btn-large" type="submit">Signup</button>
+        </div>
       </div>
     </form>
   </div>

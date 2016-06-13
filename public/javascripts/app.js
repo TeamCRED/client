@@ -44,13 +44,8 @@ app.config(function($stateProvider, $urlRouterProvider){
       controller: 'MainController'
     })
     .state('dashboard.login', {
-      url: '/login',
+      url: '/login?signup',
       templateUrl: 'partials/login.html',
       controller: 'login'
-    })
-    .state('dashboard.signup', {
-      url: '/signup',
-      templateUrl: 'partials/signup.html',
-      controller: 'signup'
     })
   });
