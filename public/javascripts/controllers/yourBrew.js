@@ -60,7 +60,17 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth, $location
           localStorage.setItem('batchData', result.data.batch.id);
 
           $scope.batch = result.data.batch;
-          getBuddies($scope.batch.id);
+          $http.post(server + 'user_batch', {
+            batch_id: $scope.batch.id
+          }, {
+            headers: {
+              "Authorization": "Bearer " + localStorage.token,
+            }
+          }).then(function(result) {
+            getBuddies($scope.batch.id);
+          }).catch(function() {
+            getBuddies($scope.batch.id);
+          });
           $scope.employees = result.data.employees;
           $scope.users = result.data.users;
         } else {
