@@ -16,7 +16,7 @@ app.controller('yourBrew', function($scope, $http, $stateParams, Auth, $location
   function getBuddies(batch_id) {
     var user = Auth.getUser();
     if (user) {
-      $http.get(server + 'batch/' + batch_id + '/buddies/' + user.id)
+      $http.get(server + 'buddies/' + user.id + '/batch/' + batch_id)
         .then(function(result) {
           $scope.buddies = result.data;
           console.log(result.data);
